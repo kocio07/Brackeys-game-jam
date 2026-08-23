@@ -1,0 +1,4 @@
+# Godot 4+ specific ignores
+nowy-projkt-gry/.godot/
+nowy-projkt-gry/android/
+nowy-projkt-gry/assets
