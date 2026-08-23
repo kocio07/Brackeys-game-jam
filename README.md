@@ -1,2 +1,2 @@
 # Brackeys-game-jam
-our game of brackeys game jam !
+our game made for brackeys game jam !
