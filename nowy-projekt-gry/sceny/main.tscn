@@ -1,12 +1,12 @@
 [gd_scene format=4 uid="uid://bb4ielswjjbsi"]
 
-[ext_resource type="Texture2D" uid="uid://dbptuh0ix4gfa" path="res://Rocky Roads/Tilesets/tileset_desert.png" id="1_fdwem"]
-[ext_resource type="Texture2D" uid="uid://bc0ad3b7yi710" path="res://Rocky Roads/Tilesets/tileset_dirt.png" id="2_oxnlj"]
-[ext_resource type="Texture2D" uid="uid://bl04dcoxn0kqn" path="res://Rocky Roads/Tilesets/tileset_forest.png" id="3_6avht"]
-[ext_resource type="Texture2D" uid="uid://e6c7jfq838j3" path="res://Rocky Roads/Tilesets/tileset_lava.png" id="4_7e6us"]
-[ext_resource type="Texture2D" uid="uid://b3tcswifc3a4n" path="res://Rocky Roads/Tilesets/tileset_snow.png" id="5_5atrl"]
-[ext_resource type="Texture2D" uid="uid://dlhsip3o77prx" path="res://Rocky Roads/Tilesets/tileset_water.png" id="6_lhsd8"]
-[ext_resource type="Texture2D" uid="uid://dmpvwgndhcuh6" path="res://Rocky Roads/Objects/flag.png" id="7_cwrqu"]
+[ext_resource type="Texture2D" uid="uid://dbptuh0ix4gfa" path="res://assets/Rocky Roads/Tilesets/tileset_desert.png" id="1_fdwem"]
+[ext_resource type="Texture2D" uid="uid://bc0ad3b7yi710" path="res://assets/Rocky Roads/Tilesets/tileset_dirt.png" id="2_oxnlj"]
+[ext_resource type="Texture2D" uid="uid://bl04dcoxn0kqn" path="res://assets/Rocky Roads/Tilesets/tileset_forest.png" id="3_6avht"]
+[ext_resource type="Texture2D" uid="uid://e6c7jfq838j3" path="res://assets/Rocky Roads/Tilesets/tileset_lava.png" id="4_7e6us"]
+[ext_resource type="Texture2D" uid="uid://b3tcswifc3a4n" path="res://assets/Rocky Roads/Tilesets/tileset_snow.png" id="5_5atrl"]
+[ext_resource type="Texture2D" uid="uid://dlhsip3o77prx" path="res://assets/Rocky Roads/Tilesets/tileset_water.png" id="6_lhsd8"]
+[ext_resource type="Texture2D" uid="uid://dmpvwgndhcuh6" path="res://assets/Rocky Roads/Objects/flag.png" id="7_cwrqu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ghpb7"]
 texture = ExtResource("1_fdwem")

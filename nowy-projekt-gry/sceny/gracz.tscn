@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cohsbpcu4rhms"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_epuwg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f6xyr"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=724449849]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2062951471]
+sprite_frames = SubResource("SpriteFrames_epuwg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1493118274]
+shape = SubResource("RectangleShape2D_f6xyr")
