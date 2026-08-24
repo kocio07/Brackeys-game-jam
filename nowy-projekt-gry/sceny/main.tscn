@@ -273,4 +273,5 @@ rotation_smoothing_enabled = true
 position = Vector2(82, -8)
 
 [node name="Checkpoint" parent="." unique_id=666461698 instance=ExtResource("9_7e6us")]
+z_index = -1
 position = Vector2(-42, -32)
