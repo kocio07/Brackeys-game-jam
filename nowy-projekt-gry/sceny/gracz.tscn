@@ -161,12 +161,14 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f6xyr"]
 size = Vector2(20, 28)
 
-[node name="Gracz" type="CharacterBody2D" unique_id=724449849]
+[node name="Gracz" type="CharacterBody2D" unique_id=724449849 groups=["gracz"]]
 script = ExtResource("1_oap5v")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2062951471]
 sprite_frames = SubResource("SpriteFrames_epuwg")
 animation = &"Jump"
+frame = 7
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1493118274]
 position = Vector2(0, 2)

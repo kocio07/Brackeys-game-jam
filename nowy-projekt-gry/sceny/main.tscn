@@ -6,8 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://e6c7jfq838j3" path="res://assets/Rocky Roads/Tilesets/tileset_lava.png" id="4_7e6us"]
 [ext_resource type="Texture2D" uid="uid://b3tcswifc3a4n" path="res://assets/Rocky Roads/Tilesets/tileset_snow.png" id="5_5atrl"]
 [ext_resource type="Texture2D" uid="uid://dlhsip3o77prx" path="res://assets/Rocky Roads/Tilesets/tileset_water.png" id="6_lhsd8"]
-[ext_resource type="Texture2D" uid="uid://dmpvwgndhcuh6" path="res://assets/Rocky Roads/Objects/flag.png" id="7_cwrqu"]
 [ext_resource type="PackedScene" uid="uid://cohsbpcu4rhms" path="res://sceny/gracz.tscn" id="8_oxnlj"]
+[ext_resource type="PackedScene" uid="uid://d0b62vcx35get" path="res://sceny/killzone.tscn" id="9_6avht"]
+[ext_resource type="PackedScene" uid="uid://b35y6nixbafqb" path="res://sceny/checkpoint.tscn" id="9_7e6us"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ghpb7"]
 texture = ExtResource("1_fdwem")
@@ -253,88 +254,11 @@ sources/3 = SubResource("TileSetAtlasSource_vf4ao")
 sources/4 = SubResource("TileSetAtlasSource_avd7h")
 sources/5 = SubResource("TileSetAtlasSource_aclmx")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pi7gf"]
-atlas = ExtResource("7_cwrqu")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_oxg6p"]
-atlas = ExtResource("7_cwrqu")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_06eqf"]
-atlas = ExtResource("7_cwrqu")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mny4e"]
-atlas = ExtResource("7_cwrqu")
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pbd1v"]
-atlas = ExtResource("7_cwrqu")
-region = Rect2(128, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_oh337"]
-atlas = ExtResource("7_cwrqu")
-region = Rect2(160, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_j0ig8"]
-atlas = ExtResource("7_cwrqu")
-region = Rect2(192, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_873jp"]
-atlas = ExtResource("7_cwrqu")
-region = Rect2(224, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ba5tg"]
-atlas = ExtResource("7_cwrqu")
-region = Rect2(256, 0, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_4vuit"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pi7gf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_oxg6p")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_06eqf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mny4e")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pbd1v")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_oh337")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_j0ig8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_873jp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ba5tg")
-}],
-"loop": 1,
-"name": &"default",
-"speed": 9.0
-}]
-
 [node name="Main" type="Node2D" unique_id=152126973]
 
 [node name="MainMap" type="TileMapLayer" parent="." unique_id=80669827]
 tile_map_data = PackedByteArray("AAD+////AgAEAAEAAAD/////AgADAAEAAAAAAP//AgAEAAEAAAABAP//AgADAAEAAAACAP//AgAEAAEAAAADAP//AgAFAAEAAAD9////AgADAAEAAAD8////AgACAAEAAAD8/wAAAgABAAMAAAADAAAAAgAGAAMAAAAEAAAAAgALAAUAAAD7/wAAAgALAAUAAAD9/wAAAgADAAIAAAD9/wEAAgADAAMAAAD+/wAAAgAEAAIAAAD+/wEAAgAEAAMAAAD//wAAAgADAAIAAAD//wEAAgADAAMAAAAAAAAAAgAEAAIAAAAAAAEAAgAEAAIAAAABAAAAAgADAAIAAAABAAEAAgAFAAMAAAACAAAAAgAEAAIAAAACAAEAAgAEAAMAAAABAAIAAgAFAAMAAAABAAMAAgAEAAIAAAACAAIAAgAEAAIAAAACAAMAAgAEAAMAAAD//wIAAgADAAMAAAD//wMAAgADAAMAAAAAAAIAAgAEAAIAAAAAAAMAAgAEAAMAAAD9/wIAAgADAAIAAAD9/wMAAgADAAMAAAD+/wIAAgACAAMAAAD+/wMAAgAEAAMAAAADAAEAAgAGAAMAAAADAAIAAgAGAAMAAAADAAMAAgAGAAMAAAADAAQAAgAGAAMAAAADAAUAAgAGAAMAAAADAAYAAgAGAAMAAAADAAcAAgAGAAMAAAD8/wEAAgABAAMAAAD8/wIAAgABAAMAAAD8/wMAAgABAAMAAAD8/wQAAgABAAMAAAD8/wUAAgABAAMAAAD8/wYAAgABAAMAAAD8/wcAAgABAAMAAAD9//7/AgALAAUAAAD9/wQAAgADAAIAAAD9/wUAAgADAAMAAAD+/wQAAgAEAAIAAAD+/wUAAgAEAAMAAAD//wQAAgADAAIAAAD//wUAAgADAAMAAAAAAAQAAgAEAAIAAAAAAAUAAgAEAAMAAAABAAQAAgADAAIAAAABAAUAAgADAAMAAAACAAQAAgAEAAIAAAACAAUAAgAEAAMAAAABAAYAAgADAAIAAAABAAcAAgADAAMAAAACAAYAAgAEAAIAAAACAAcAAgAEAAMAAAD//wYAAgADAAIAAAD//wcAAgADAAMAAAAAAAYAAgAEAAIAAAAAAAcAAgAEAAMAAAD9/wYAAgADAAIAAAD9/wcAAgADAAMAAAD+/wYAAgAEAAIAAAD+/wcAAgAEAAMAAAAAAP7/AgALAAUAAAD+//7/AgACAAAAAAD///7/AgADAAAAAAABAP7/AgAFAAAAAAA=")
 tile_set = SubResource("TileSet_4vuit")
-
-[node name="Flag" type="AnimatedSprite2D" parent="." unique_id=1461383789]
-position = Vector2(-41, -32)
-sprite_frames = SubResource("SpriteFrames_4vuit")
-autoplay = "default"
-frame_progress = 0.27247864
 
 [node name="Gracz" parent="." unique_id=724449849 instance=ExtResource("8_oxnlj")]
 position = Vector2(1, -43)
@@ -344,3 +268,9 @@ position = Vector2(-1, 4)
 zoom = Vector2(3, 3)
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
+
+[node name="Killzone" parent="." unique_id=2090855984 instance=ExtResource("9_6avht")]
+position = Vector2(82, -8)
+
+[node name="Checkpoint" parent="." unique_id=666461698 instance=ExtResource("9_7e6us")]
+position = Vector2(-42, -32)

@@ -3,6 +3,10 @@ extends CharacterBody2D
 @export var gravity = 1000
 @export var jump_force = 183
 
+func _ready() -> void:
+	if Global.checkpoint_pos != Vector2(-999, -999):
+		global_position = Global.checkpoint_pos
+	
 func _physics_process(delta: float) -> void:
 	
 	var direction = Input.get_axis("left", "right")
@@ -37,6 +41,3 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite2D.play("Jump")
 		
 	move_and_slide()
-
-
-		
