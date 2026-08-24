@@ -1,11 +1,29 @@
 [gd_scene format=3 uid="uid://dnebet0hm1n32"]
 
-[ext_resource type="Texture2D" uid="uid://2lqtdjtqukvr" path="res://assets/Modern_UI_Style_2_32x32.png" id="1_qxeev"]
+[ext_resource type="Texture2D" uid="uid://diviy8wtoniqa" path="res://assets/Modern_UI_Style_2_48x48.png" id="1_yk7ch"]
 [ext_resource type="FontFile" uid="uid://bcrp3l0uldjoy" path="res://assets/augiepixel.ttf" id="2_yk7ch"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k7ey5"]
+texture = ExtResource("1_yk7ch")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+region_rect = Rect2(23.885666, -0.0014915466, 96.14085, 96.01877)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cnv3x"]
+texture = ExtResource("1_yk7ch")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+region_rect = Rect2(32.931976, 125.91524, 78.112076, 81.120514)
 
 [sub_resource type="LabelSettings" id="LabelSettings_f6xyr"]
 font = ExtResource("2_yk7ch")
 font_size = 60
+outline_size = 10
+outline_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
 
 [node name="Menu" type="Control" unique_id=1661054308]
 layout_mode = 3
@@ -16,29 +34,20 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Button" type="Button" parent="." unique_id=1267348623]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-
-[node name="Start" type="NinePatchRect" parent="Button" unique_id=169139480]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 194.25385
-offset_top = 267.75
-offset_right = 949.74615
-offset_bottom = 372.25
+offset_left = -354.5
+offset_top = -57.5
+offset_right = 354.5
+offset_bottom = 57.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_qxeev")
-region_rect = Rect2(823.92346, 447.7229, 48.14038, 32.188904)
-patch_margin_left = 15
-patch_margin_top = 15
-patch_margin_right = 15
-patch_margin_bottom = 15
+theme_override_styles/normal = SubResource("StyleBoxTexture_k7ey5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_cnv3x")
 
 [node name="Label" type="Label" parent="." unique_id=85093269]
 layout_mode = 1
