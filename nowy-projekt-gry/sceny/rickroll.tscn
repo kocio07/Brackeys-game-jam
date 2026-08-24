@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://diviy8wtoniqa" path="res://assets/Modern_UI_Style_2_48x48.png" id="2_j4sd4"]
 [ext_resource type="Texture2D" uid="uid://2lqtdjtqukvr" path="res://assets/Modern_UI_Style_2_32x32.png" id="3_amkgf"]
 [ext_resource type="FontFile" uid="uid://bcrp3l0uldjoy" path="res://assets/augiepixel.ttf" id="5_g5th7"]
+[ext_resource type="Script" uid="uid://bpqqas3ekmhai" path="res://skrypty/therealbutton.gd" id="5_nqv1u"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g5th7"]
 texture = ExtResource("2_j4sd4")
@@ -68,6 +69,7 @@ grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_g5th7")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_nqv1u")
 theme_override_styles/hover = SubResource("StyleBoxTexture_08bbi")
+script = ExtResource("5_nqv1u")
 
 [node name="Label" type="Label" parent="." unique_id=283422428]
 visible = false
