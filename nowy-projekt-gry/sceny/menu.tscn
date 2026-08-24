@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://dnebet0hm1n32"]
+
+[ext_resource type="Texture2D" uid="uid://2lqtdjtqukvr" path="res://assets/Modern_UI_Style_2_32x32.png" id="1_qxeev"]
+[ext_resource type="FontFile" uid="uid://bcrp3l0uldjoy" path="res://assets/augiepixel.ttf" id="2_yk7ch"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_f6xyr"]
+font = ExtResource("2_yk7ch")
+font_size = 60
+
+[node name="Menu" type="Control" unique_id=1661054308]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="." unique_id=1267348623]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Start" type="NinePatchRect" parent="Button" unique_id=169139480]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 194.25385
+offset_top = 267.75
+offset_right = 949.74615
+offset_bottom = 372.25
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_qxeev")
+region_rect = Rect2(823.92346, 447.7229, 48.14038, 32.188904)
+patch_margin_left = 15
+patch_margin_top = 15
+patch_margin_right = 15
+patch_margin_bottom = 15
+
+[node name="Label" type="Label" parent="." unique_id=85093269]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -282.5
+offset_top = -29.0
+offset_right = 282.5
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Definitely start button"
+label_settings = SubResource("LabelSettings_f6xyr")
