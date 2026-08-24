@@ -417,7 +417,7 @@ position = Vector2(48, 26)
 
 [node name="Checkpoint" parent="." unique_id=666461698 instance=ExtResource("9_7e6us")]
 z_index = -1
-position = Vector2(-42, -32)
+position = Vector2(18, -32)
 
 [node name="Label" type="Label" parent="." unique_id=238390962]
 offset_left = 361.0
@@ -425,4 +425,13 @@ offset_top = -27.000008
 offset_right = 625.0
 offset_bottom = -4.0000076
 scale = Vector2(0.30410948, 0.30410948)
-text = "4 kratek sie juz nie da przeskoczyc"
+text = "4 kratek juz nie przskoczysz"
+
+[node name="Label2" type="Label" parent="." unique_id=374768544]
+offset_left = 520.0
+offset_top = -44.0
+offset_right = 784.0
+offset_bottom = -21.0
+scale = Vector2(0.30410948, 0.30410948)
+text = "dobra jednak sie da ale trzeba sie 
+postarac"
