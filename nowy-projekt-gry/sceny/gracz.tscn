@@ -159,7 +159,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f6xyr"]
-size = Vector2(20, 28)
+size = Vector2(11, 25)
 
 [node name="Gracz" type="CharacterBody2D" unique_id=724449849 groups=["gracz"]]
 script = ExtResource("1_oap5v")
@@ -171,5 +171,5 @@ frame = 7
 frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1493118274]
-position = Vector2(0, 2)
+position = Vector2(-1.5, 3.5)
 shape = SubResource("RectangleShape2D_f6xyr")

@@ -2,13 +2,12 @@
 
 [ext_resource type="Script" uid="uid://daftanexkp4si" path="res://skrypty/killzone.gd" id="1_10u7h"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_f6xyr"]
-size = Vector2(43, 10)
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6avht"]
 
 [node name="Killzone" type="Area2D" unique_id=2090855984]
 script = ExtResource("1_10u7h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1802962580]
-shape = SubResource("RectangleShape2D_f6xyr")
+shape = SubResource("WorldBoundaryShape2D_6avht")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
