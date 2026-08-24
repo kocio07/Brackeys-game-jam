@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://clnfdxx5s2kpy"]
+
+[ext_resource type="VideoStream" uid="uid://dkgqyxefsh1qf" path="res://assets/Rickroll HD No ads.ogv" id="1_qtg40"]
+[ext_resource type="Script" uid="uid://b75s7j010kw3e" path="res://skrypty/video_stream_player.gd" id="2_amkgf"]
+[ext_resource type="Texture2D" uid="uid://diviy8wtoniqa" path="res://assets/Modern_UI_Style_2_48x48.png" id="2_j4sd4"]
+[ext_resource type="Texture2D" uid="uid://2lqtdjtqukvr" path="res://assets/Modern_UI_Style_2_32x32.png" id="3_amkgf"]
+[ext_resource type="FontFile" uid="uid://bcrp3l0uldjoy" path="res://assets/augiepixel.ttf" id="5_g5th7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g5th7"]
+texture = ExtResource("2_j4sd4")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+region_rect = Rect2(180.09166, 704.9584, 71.94348, 74.977295)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nqv1u"]
+texture = ExtResource("3_amkgf")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+region_rect = Rect2(121.92591, 570.05133, 44.172813, 45.94397)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_08bbi"]
+texture = ExtResource("2_j4sd4")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+region_rect = Rect2(35.94958, 704.99603, 72.04991, 74.98981)
+
+[sub_resource type="LabelSettings" id="LabelSettings_nqv1u"]
+font = ExtResource("5_g5th7")
+font_size = 50
+outline_size = 10
+outline_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+
+[node name="Control" type="Control" unique_id=1632945252]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=615292278]
+layout_mode = 0
+offset_left = 2.0
+offset_right = 856.0
+offset_bottom = 480.0
+stream = ExtResource("1_qtg40")
+autoplay = true
+script = ExtResource("2_amkgf")
+
+[node name="Button" type="Button" parent="." unique_id=1379110834]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 111.0
+offset_top = -56.0
+offset_right = 247.5
+offset_bottom = 59.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_g5th7")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_nqv1u")
+theme_override_styles/hover = SubResource("StyleBoxTexture_08bbi")
+
+[node name="Label" type="Label" parent="." unique_id=283422428]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -534.0
+offset_top = -28.0
+offset_right = 467.0
+offset_bottom = 131.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "okay, that's the real one >"
+label_settings = SubResource("LabelSettings_nqv1u")
+
+[connection signal="finished" from="VideoStreamPlayer" to="VideoStreamPlayer" method="_on_finished"]
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
