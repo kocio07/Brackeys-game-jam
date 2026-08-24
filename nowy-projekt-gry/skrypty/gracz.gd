@@ -1,7 +1,7 @@
 extends CharacterBody2D 
 @export var speed = 155
 @export var gravity = 1000
-@export var jump_force = 250
+@export var jump_force = 183
 
 func _physics_process(delta: float) -> void:
 	
@@ -33,9 +33,10 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		
-		velocity -= jump_force
+		velocity.y -= jump_force
 		$AnimatedSprite2D.play("Jump")
 		
+	move_and_slide()
+
+
 		
-		
-		move_and_slide()
