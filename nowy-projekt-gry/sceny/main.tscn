@@ -439,3 +439,6 @@ postarac"
 
 [node name="wrog 1" parent="." unique_id=1323484641 instance=ExtResource("10_7e6us")]
 position = Vector2(130, -57)
+rotation = -0.0015106201
+collision_layer = 1
+collision_mask = 1

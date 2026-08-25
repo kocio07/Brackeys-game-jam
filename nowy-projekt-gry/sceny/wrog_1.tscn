@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://deanx3wosse4c"]
+
+[ext_resource type="Texture2D" uid="uid://1lmgpmui3dvw" path="res://assets/Rocky Roads/Enemies/bear_brown.png" id="1_3l2af"]
+[ext_resource type="Script" uid="uid://lqpfj35l5fni" path="res://skrypty/wrog_1.gd" id="1_voncd"]
+[ext_resource type="Script" uid="uid://dy8sygom0ujxq" path="res://skrypty/weak.gd" id="2_xmk5o"]
+[ext_resource type="Script" uid="uid://st16qvf3nl5n" path="res://skrypty/death.gd" id="3_voncd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_44xdj"]
+atlas = ExtResource("1_3l2af")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xmk5o"]
+atlas = ExtResource("1_3l2af")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_voncd"]
+atlas = ExtResource("1_3l2af")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o087o"]
+atlas = ExtResource("1_3l2af")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18byg"]
+atlas = ExtResource("1_3l2af")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sx35h"]
+atlas = ExtResource("1_3l2af")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4vuit"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_44xdj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xmk5o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_voncd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o087o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_18byg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sx35h")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vtfqq"]
+size = Vector2(10, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4vuit"]
+size = Vector2(15, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5rwrc"]
+size = Vector2(19, 18)
+
+[node name="wrog 1" type="CharacterBody2D" unique_id=1323484641]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_voncd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=19055680]
+position = Vector2(1.5, -7)
+sprite_frames = SubResource("SpriteFrames_4vuit")
+autoplay = "default"
+frame_progress = 0.761602
+
+[node name="weak" type="Area2D" parent="." unique_id=1942541827]
+script = ExtResource("2_xmk5o")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="weak" unique_id=472738964]
+position = Vector2(-6, -1)
+shape = SubResource("RectangleShape2D_vtfqq")
+
+[node name="death" type="Area2D" parent="." unique_id=2105233412]
+script = ExtResource("3_voncd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="death" unique_id=321027566]
+position = Vector2(6.5, -1)
+shape = SubResource("RectangleShape2D_4vuit")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1143310099]
+position = Vector2(1.5, 0)
+shape = SubResource("RectangleShape2D_5rwrc")
+
+[connection signal="body_entered" from="weak" to="death" method="_on_weak_body_entered"]
+[connection signal="body_entered" from="death" to="." method="_on_death_body_entered"]
