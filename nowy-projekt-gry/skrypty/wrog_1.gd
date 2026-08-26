@@ -15,6 +15,11 @@ func _ready() -> void:
 		scale.x = -abs(scale.x)
 
 func _physics_process(delta: float) -> void:
+	if is_dead:
+		velocity.y += gravity * delta
+		move_and_slide()
+		return
+		
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	else:
@@ -48,4 +53,16 @@ func _on_weak_body_entered(body: Node2D) -> void:
 	if body.is_in_group("gracz"):
 		if body.has_method("bounce"):
 			body.bounce()
-		queue_free()
+		defeat()
+		
+var is_dead: bool = false
+
+func defeat() -> void:
+	if is_dead:
+		return
+	is_dead = true
+	
+	$CollisionShape2D.set_deferred("disabled", true)
+	scale.y = -scale.y
+	velocity.y = -200.0
+	get_tree().create_timer(2.0).timeout.connect(queue_free)

@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://b35y6nixbafqb" path="res://sceny/checkpoint.tscn" id="9_7e6us"]
 [ext_resource type="PackedScene" uid="uid://deanx3wosse4c" path="res://sceny/wrog_1.tscn" id="10_7e6us"]
 [ext_resource type="AudioStream" uid="uid://by266lnf1mxt0" path="res://assets/music/time_for_adventure.mp3" id="11_5atrl"]
+[ext_resource type="FontFile" uid="uid://bcrp3l0uldjoy" path="res://assets/augiepixel.ttf" id="12_lhsd8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ghpb7"]
 texture = ExtResource("1_fdwem")
@@ -399,6 +400,9 @@ sources/3 = SubResource("TileSetAtlasSource_vf4ao")
 sources/4 = SubResource("TileSetAtlasSource_avd7h")
 sources/5 = SubResource("TileSetAtlasSource_aclmx")
 
+[sub_resource type="LabelSettings" id="LabelSettings_5atrl"]
+font = ExtResource("12_lhsd8")
+
 [node name="Main" type="Node2D" unique_id=152126973]
 
 [node name="MainMap" type="TileMapLayer" parent="." unique_id=80669827]
@@ -450,7 +454,10 @@ autoplay = true
 parameters/looping = true
 
 [node name="Label3" type="Label" parent="." unique_id=1548502329]
-offset_left = 117.0
-offset_top = -103.0
-offset_right = 157.0
-offset_bottom = -80.0
+offset_left = 70.0
+offset_top = -86.0
+offset_right = 232.0
+offset_bottom = -63.0
+scale = Vector2(0.7200012, 0.7200012)
+text = "Kill bear by jumping on it"
+label_settings = SubResource("LabelSettings_5atrl")
