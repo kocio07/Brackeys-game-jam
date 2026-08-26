@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://qkuidj0wdhrl" path="res://assets/paid/Modern_UI_Style_2_32x32.png" id="2_euj8q"]
 [ext_resource type="FontFile" uid="uid://bcrp3l0uldjoy" path="res://assets/augiepixel.ttf" id="2_yk7ch"]
 [ext_resource type="Script" uid="uid://bfj3g866vstba" path="res://skrypty/button.gd" id="3_cnv3x"]
+[ext_resource type="Script" uid="uid://dx6cdwgpep1dw" path="res://skrypty/skip.gd" id="5_euj8q"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k7ey5"]
 texture = ExtResource("1_cnv3x")
@@ -32,6 +33,12 @@ font = ExtResource("2_yk7ch")
 font_size = 80
 outline_size = 10
 outline_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_epuwg"]
+font = ExtResource("2_yk7ch")
+font_size = 30
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Menu" type="Control" unique_id=1661054308]
 layout_mode = 3
@@ -76,4 +83,39 @@ text = "that's definitely start button
 >>>"
 label_settings = SubResource("LabelSettings_f6xyr")
 
+[node name="Skip" type="Button" parent="." unique_id=847739581]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -571.0
+offset_top = 253.0
+offset_right = -461.0
+offset_bottom = 315.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_k7ey5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_yk7ch")
+theme_override_styles/hover = SubResource("StyleBoxTexture_cnv3x")
+script = ExtResource("5_euj8q")
+
+[node name="SKip" type="Label" parent="." unique_id=204268442]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -456.0
+offset_top = 281.0
+offset_right = 545.0
+offset_bottom = 440.0
+grow_horizontal = 2
+grow_vertical = 2
+text = " <<< skip (press it ONLY if you already were here pls)"
+label_settings = SubResource("LabelSettings_epuwg")
+
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Skip" to="Skip" method="_on_pressed"]
