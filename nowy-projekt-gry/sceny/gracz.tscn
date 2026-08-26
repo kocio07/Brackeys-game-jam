@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://biux2uqxjgfkj" path="res://assets/1 Pink_Monster/Pink_Monster_Jump_8.png" id="3_xr68n"]
 [ext_resource type="Texture2D" uid="uid://cs4hu5kvuk04b" path="res://assets/1 Pink_Monster/Pink_Monster.png" id="4_41j5y"]
 [ext_resource type="Texture2D" uid="uid://ctrwue8w1qaqb" path="res://assets/1 Pink_Monster/Pink_Monster_Walk_6.png" id="5_fggid"]
+[ext_resource type="AudioStream" uid="uid://c6ar72kq3hii5" path="res://assets/sounds/jump.wav" id="6_yoavk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hi6mn"]
 atlas = ExtResource("2_yoavk")
@@ -173,3 +174,7 @@ frame_progress = 1.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1493118274]
 position = Vector2(-1.5, 3.5)
 shape = SubResource("RectangleShape2D_f6xyr")
+
+[node name="Skok sfx" type="AudioStreamPlayer2D" parent="." unique_id=1955351490]
+stream = ExtResource("6_yoavk")
+volume_db = -6.804

@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://lqpfj35l5fni" path="res://skrypty/wrog_1.gd" id="1_voncd"]
 [ext_resource type="Script" uid="uid://dy8sygom0ujxq" path="res://skrypty/weak.gd" id="2_xmk5o"]
 [ext_resource type="Script" uid="uid://st16qvf3nl5n" path="res://skrypty/death.gd" id="3_voncd"]
+[ext_resource type="AudioStream" uid="uid://cl7towppx2sl4" path="res://assets/sounds/hurt.wav" id="5_o087o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_44xdj"]
 atlas = ExtResource("1_3l2af")
@@ -92,6 +93,10 @@ shape = SubResource("RectangleShape2D_4vuit")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1143310099]
 position = Vector2(1.5, 0)
 shape = SubResource("RectangleShape2D_5rwrc")
+
+[node name="ouch sfx" type="AudioStreamPlayer2D" parent="." unique_id=164384208]
+stream = ExtResource("5_o087o")
+volume_db = -3.888
 
 [connection signal="body_entered" from="weak" to="death" method="_on_weak_body_entered"]
 [connection signal="body_entered" from="death" to="." method="_on_death_body_entered"]

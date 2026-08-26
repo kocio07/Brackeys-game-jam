@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dmpvwgndhcuh6" path="res://assets/Rocky Roads/Objects/flag.png" id="1_5dqvb"]
 [ext_resource type="Script" uid="uid://0xsd1or1rg4e" path="res://skrypty/checkpoint.gd" id="1_s6sgy"]
+[ext_resource type="AudioStream" uid="uid://belko11uwck2f" path="res://assets/sounds/tap.wav" id="3_j08dg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s6sgy"]
 atlas = ExtResource("1_5dqvb")
@@ -90,5 +91,9 @@ shape = SubResource("RectangleShape2D_f6xyr")
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=818139142]
 position = Vector2(14, 0)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1425467564]
+stream = ExtResource("3_j08dg")
+volume_db = -13.608
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
