@@ -2,20 +2,20 @@
 
 [ext_resource type="VideoStream" uid="uid://dkgqyxefsh1qf" path="res://assets/Rickroll HD No ads.ogv" id="1_qtg40"]
 [ext_resource type="Script" uid="uid://b75s7j010kw3e" path="res://skrypty/video_stream_player.gd" id="2_amkgf"]
-[ext_resource type="Texture2D" uid="uid://diviy8wtoniqa" path="res://assets/Modern_UI_Style_2_48x48.png" id="2_j4sd4"]
-[ext_resource type="Texture2D" uid="uid://2lqtdjtqukvr" path="res://assets/Modern_UI_Style_2_32x32.png" id="3_amkgf"]
+[ext_resource type="Texture2D" uid="uid://cnnal8haweqj" path="res://assets/paid/Modern_UI_Style_2_48x48.png" id="3_g5th7"]
+[ext_resource type="Texture2D" uid="uid://qkuidj0wdhrl" path="res://assets/paid/Modern_UI_Style_2_32x32.png" id="4_nqv1u"]
 [ext_resource type="FontFile" uid="uid://bcrp3l0uldjoy" path="res://assets/augiepixel.ttf" id="5_g5th7"]
 [ext_resource type="Script" uid="uid://bpqqas3ekmhai" path="res://skrypty/therealbutton.gd" id="5_nqv1u"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g5th7"]
-texture = ExtResource("2_j4sd4")
+texture = ExtResource("3_g5th7")
 texture_margin_left = 20.0
 texture_margin_top = 20.0
 texture_margin_right = 20.0
 region_rect = Rect2(180.09166, 704.9584, 71.94348, 74.977295)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nqv1u"]
-texture = ExtResource("3_amkgf")
+texture = ExtResource("4_nqv1u")
 texture_margin_left = 20.0
 texture_margin_top = 20.0
 texture_margin_right = 20.0
@@ -23,7 +23,7 @@ texture_margin_bottom = 20.0
 region_rect = Rect2(121.92591, 570.05133, 44.172813, 45.94397)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_08bbi"]
-texture = ExtResource("2_j4sd4")
+texture = ExtResource("3_g5th7")
 texture_margin_left = 20.0
 texture_margin_top = 20.0
 texture_margin_right = 20.0

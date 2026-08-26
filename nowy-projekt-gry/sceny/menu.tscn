@@ -1,19 +1,19 @@
 [gd_scene format=3 uid="uid://dnebet0hm1n32"]
 
-[ext_resource type="Texture2D" uid="uid://2lqtdjtqukvr" path="res://assets/Modern_UI_Style_2_32x32.png" id="1_qxeev"]
-[ext_resource type="Texture2D" uid="uid://diviy8wtoniqa" path="res://assets/Modern_UI_Style_2_48x48.png" id="1_yk7ch"]
+[ext_resource type="Texture2D" uid="uid://cnnal8haweqj" path="res://assets/paid/Modern_UI_Style_2_48x48.png" id="1_cnv3x"]
+[ext_resource type="Texture2D" uid="uid://qkuidj0wdhrl" path="res://assets/paid/Modern_UI_Style_2_32x32.png" id="2_euj8q"]
 [ext_resource type="FontFile" uid="uid://bcrp3l0uldjoy" path="res://assets/augiepixel.ttf" id="2_yk7ch"]
 [ext_resource type="Script" uid="uid://bfj3g866vstba" path="res://skrypty/button.gd" id="3_cnv3x"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k7ey5"]
-texture = ExtResource("1_yk7ch")
+texture = ExtResource("1_cnv3x")
 texture_margin_left = 20.0
 texture_margin_top = 20.0
 texture_margin_right = 20.0
 region_rect = Rect2(180.09166, 704.9584, 71.94348, 74.977295)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yk7ch"]
-texture = ExtResource("1_qxeev")
+texture = ExtResource("2_euj8q")
 texture_margin_left = 20.0
 texture_margin_top = 20.0
 texture_margin_right = 20.0
@@ -21,7 +21,7 @@ texture_margin_bottom = 20.0
 region_rect = Rect2(121.92591, 570.05133, 44.172813, 45.94397)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cnv3x"]
-texture = ExtResource("1_yk7ch")
+texture = ExtResource("1_cnv3x")
 texture_margin_left = 20.0
 texture_margin_top = 20.0
 texture_margin_right = 20.0
