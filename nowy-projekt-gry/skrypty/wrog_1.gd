@@ -66,6 +66,8 @@ func defeat() -> void:
 	$CollisionShape2D.set_deferred("disabled", true)
 	$weak/CollisionShape2D2.set_deferred("disabled", true)
 	$death/CollisionShape2D.set_deferred("disabled", true)
+	if has_node("text/CollisionShape2D"):
+		$text/CollisionShape2D.set_deferred("disabled", true)
 	scale.y = -scale.y
 	velocity.y = -200.0
 	get_tree().create_timer(2.0).timeout.connect(queue_free)
