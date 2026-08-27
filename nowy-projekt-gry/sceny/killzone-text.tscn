@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bomkomr5urnuq"]
+
+[ext_resource type="Script" uid="uid://dox2o414klyqj" path="res://killzone-text.gd" id="1_mv82i"]
+[ext_resource type="FontFile" uid="uid://bcrp3l0uldjoy" path="res://assets/augiepixel.ttf" id="2_q0sd0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rr6wh"]
+size = Vector2(352, 20)
+
+[sub_resource type="LabelSettings" id="LabelSettings_f6xyr"]
+font = ExtResource("2_q0sd0")
+font_size = 22
+
+[node name="Killzone" type="Area2D" unique_id=2090855984]
+script = ExtResource("1_mv82i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1802962580]
+position = Vector2(50, -1)
+shape = SubResource("RectangleShape2D_rr6wh")
+
+[node name="Label" type="Label" parent="." unique_id=1323238712]
+offset_left = 157.0
+offset_top = -75.0
+offset_right = 220.0
+offset_bottom = -52.0
+text = "told ya"
+label_settings = SubResource("LabelSettings_f6xyr")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
