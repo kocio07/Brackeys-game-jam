@@ -9,6 +9,7 @@ var direction: int = 1
 
 @onready var edge_detector: RayCast2D = $EdgeDetector
 
+
 func _ready() -> void:
 	if start_facing_left:
 		direction = -1
@@ -68,3 +69,9 @@ func defeat() -> void:
 	scale.y = -scale.y
 	velocity.y = -200.0
 	get_tree().create_timer(2.0).timeout.connect(queue_free)
+
+
+func _on_text_body_entered(_body: Node2D) -> void:
+	var parent = get_parent()
+	if parent.has_node("Label7"):
+		parent.get_node("Label7").visible = true

@@ -163,6 +163,8 @@ animations = [{
 size = Vector2(11, 25)
 
 [node name="Gracz" type="CharacterBody2D" unique_id=724449849 groups=["gracz"]]
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_oap5v")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2062951471]

@@ -16,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://b55s3c7atwr17" path="res://assets/Rocky Roads/Deco/rock.png" id="14_ghpb7"]
 [ext_resource type="PackedScene" uid="uid://bmhvq6x7i7i6e" path="res://killzone_wall.tscn" id="15_rr6wh"]
 [ext_resource type="PackedScene" uid="uid://bomkomr5urnuq" path="res://sceny/killzone-text.tscn" id="16_v4v28"]
+[ext_resource type="Script" uid="uid://baj6j84d0ptrq" path="res://sceny/en_text.gd" id="17_vf4ao"]
+[ext_resource type="Script" uid="uid://byrf5bnj0fglx" path="res://sceny/label_7.gd" id="18_avd7h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ghpb7"]
 texture = ExtResource("1_fdwem")
@@ -412,6 +414,13 @@ font_size = 20
 font = ExtResource("12_lhsd8")
 font_size = 15
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4vuit"]
+size = Vector2(14.736389, 20.013577)
+
+[sub_resource type="LabelSettings" id="LabelSettings_vtfqq"]
+font = ExtResource("12_lhsd8")
+font_size = 20
+
 [node name="Main" type="Node2D" unique_id=152126973]
 
 [node name="MainMap" type="TileMapLayer" parent="." unique_id=80669827]
@@ -428,7 +437,7 @@ position_smoothing_enabled = true
 rotation_smoothing_enabled = true
 
 [node name="Killzone" parent="." unique_id=2090855984 instance=ExtResource("9_6avht")]
-position = Vector2(175, 203)
+position = Vector2(174, 203)
 
 [node name="Checkpoint" parent="." unique_id=666461698 instance=ExtResource("9_7e6us")]
 z_index = -1
@@ -523,5 +532,36 @@ position = Vector2(14.999983, 0.022659292)
 
 [node name="death" parent="wrog 2" index="2" unique_id=2105233412]
 position = Vector2(-9.999989, -0.0151061965)
+
+[node name="text" type="Area2D" parent="wrog 2" unique_id=468834841]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("17_vf4ao")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wrog 2/text" unique_id=1023465511]
+position = Vector2(-3.381897, -1.0007629)
+shape = SubResource("RectangleShape2D_4vuit")
+
+[node name="Label2" type="Label" parent="." unique_id=1414780048]
+offset_left = 728.0
+offset_top = 18.0
+offset_right = 866.0
+offset_bottom = 38.0
+scale = Vector2(0.8, 0.8)
+text = "kill bear again!!!"
+label_settings = SubResource("LabelSettings_vtfqq")
+
+[node name="Label7" type="Label" parent="." unique_id=239741155]
+offset_left = 736.0
+offset_top = 63.0
+offset_right = 973.0
+offset_bottom = 83.0
+scale = Vector2(0.55999935, 0.55999935)
+text = "maybe try another method!!!"
+label_settings = SubResource("LabelSettings_vtfqq")
+script = ExtResource("18_avd7h")
+
+[connection signal="body_entered" from="wrog 2/text" to="Gracz" method="_on_text_body_entered"]
+[connection signal="body_entered" from="wrog 2/text" to="wrog 2" method="_on_text_body_entered"]
 
 [editable path="wrog 2"]
