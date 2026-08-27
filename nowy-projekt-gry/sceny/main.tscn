@@ -455,6 +455,7 @@ autoplay = true
 parameters/looping = true
 
 [node name="Label3" type="Label" parent="." unique_id=1548502329]
+z_index = -1
 offset_left = 62.0
 offset_top = -84.0
 offset_right = 285.0
