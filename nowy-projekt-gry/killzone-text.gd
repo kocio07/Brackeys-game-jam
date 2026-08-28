@@ -12,6 +12,7 @@ func _on_body_entered(body: Node2D) -> void:
 		
 		
 func respawn_gracz(body: CharacterBody2D) -> void:
+	Global.dead_counter += 1
 	if Global.checkpoint_pos != Vector2(-999, -999):
 		body.global_position = Global.checkpoint_pos
 		body.velocity = Vector2.ZERO

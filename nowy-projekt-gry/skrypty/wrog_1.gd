@@ -42,6 +42,7 @@ func _on_death_body_entered(body: Node2D) -> void:
 		
 		
 func respawn_gracz(body: CharacterBody2D) -> void:
+	Global.dead_counter += 1
 	if Global.checkpoint_pos != Vector2(-999, -999):
 		$"ouch sfx".play()
 		body.global_position = Global.checkpoint_pos

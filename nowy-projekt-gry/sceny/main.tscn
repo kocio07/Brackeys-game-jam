@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://b55s3c7atwr17" path="res://assets/Rocky Roads/Deco/rock.png" id="14_ghpb7"]
 [ext_resource type="Texture2D" uid="uid://b2y5t5nu8fwx5" path="res://assets/Skeleton_Bones/Pixel_Size_64x64/Skull_Normal.png" id="15_pbd1v"]
 [ext_resource type="PackedScene" uid="uid://bmhvq6x7i7i6e" path="res://killzone_wall.tscn" id="15_rr6wh"]
+[ext_resource type="Script" uid="uid://mklhaaoquak8" path="res://sceny/dead_ui.gd" id="16_oh337"]
 [ext_resource type="PackedScene" uid="uid://bomkomr5urnuq" path="res://sceny/killzone-text.tscn" id="16_v4v28"]
 [ext_resource type="Script" uid="uid://baj6j84d0ptrq" path="res://sceny/en_text.gd" id="17_vf4ao"]
 [ext_resource type="Script" uid="uid://byrf5bnj0fglx" path="res://sceny/label_7.gd" id="18_avd7h"]
@@ -754,6 +755,7 @@ offset_bottom = 22.0
 scale = Vector2(5.5600004, 5.5600004)
 text = "0"
 label_settings = SubResource("LabelSettings_5rwrc")
+script = ExtResource("16_oh337")
 
 [node name="Camera2D" type="Camera2D" parent="Gracz" unique_id=232602826]
 position = Vector2(0, -31)
