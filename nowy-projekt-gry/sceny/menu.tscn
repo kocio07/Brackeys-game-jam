@@ -40,6 +40,12 @@ font_size = 30
 outline_size = 10
 outline_color = Color(0, 0, 0, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_euj8q"]
+font = ExtResource("2_yk7ch")
+font_size = 52
+outline_size = 10
+outline_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+
 [node name="Menu" type="Control" unique_id=1661054308]
 layout_mode = 3
 anchors_preset = 15
@@ -116,6 +122,22 @@ grow_horizontal = 2
 grow_vertical = 2
 text = " <<< skip (press it ONLY if you already were here pls)"
 label_settings = SubResource("LabelSettings_epuwg")
+
+[node name="Label2" type="Label" parent="." unique_id=1240374339]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -563.0
+offset_top = -304.0
+offset_right = 18.0
+offset_bottom = -226.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "by kocio and wuff"
+label_settings = SubResource("LabelSettings_euj8q")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
 [connection signal="pressed" from="Skip" to="Skip" method="_on_pressed"]
