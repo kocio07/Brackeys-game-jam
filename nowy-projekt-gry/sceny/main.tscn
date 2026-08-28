@@ -15,6 +15,7 @@
 [ext_resource type="AudioStream" uid="uid://dlv0nige33idm" path="res://assets/music/11. Dangerous Cave.wav" id="13_aclmx"]
 [ext_resource type="Texture2D" uid="uid://b56tvv2yvkosa" path="res://assets/Rocky Roads/Deco/bush.png" id="13_cwrqu"]
 [ext_resource type="Texture2D" uid="uid://b55s3c7atwr17" path="res://assets/Rocky Roads/Deco/rock.png" id="14_ghpb7"]
+[ext_resource type="Texture2D" uid="uid://b2y5t5nu8fwx5" path="res://assets/Skeleton_Bones/Pixel_Size_64x64/Skull_Normal.png" id="15_pbd1v"]
 [ext_resource type="PackedScene" uid="uid://bmhvq6x7i7i6e" path="res://killzone_wall.tscn" id="15_rr6wh"]
 [ext_resource type="PackedScene" uid="uid://bomkomr5urnuq" path="res://sceny/killzone-text.tscn" id="16_v4v28"]
 [ext_resource type="Script" uid="uid://baj6j84d0ptrq" path="res://sceny/en_text.gd" id="17_vf4ao"]
@@ -457,6 +458,10 @@ sources/4 = SubResource("TileSetAtlasSource_avd7h")
 sources/5 = SubResource("TileSetAtlasSource_aclmx")
 sources/6 = SubResource("TileSetAtlasSource_oxg6p")
 
+[sub_resource type="LabelSettings" id="LabelSettings_5rwrc"]
+font = ExtResource("12_lhsd8")
+font_size = 23
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4vuit"]
 size = Vector2(14.736389, 20.013577)
 
@@ -722,7 +727,33 @@ tile_map_data = PackedByteArray("AAD7/wAAAgALAAUAAAD9//7/AgALAAUAAAD7/wIAAgADAAE
 tile_set = SubResource("TileSet_4vuit")
 
 [node name="Gracz" parent="." unique_id=724449849 instance=ExtResource("8_oxnlj")]
-position = Vector2(12, -66)
+position = Vector2(-12, -88)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Gracz" unique_id=182137539]
+
+[node name="Control" type="Control" parent="Gracz/CanvasLayer" unique_id=1346298046]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Gracz/CanvasLayer/Control" unique_id=775339713]
+layout_mode = 0
+offset_left = 1040.0
+offset_top = 9.0
+offset_right = 1136.0
+offset_bottom = 104.0
+texture = ExtResource("15_pbd1v")
+
+[node name="Label" type="Label" parent="Gracz/CanvasLayer/Control" unique_id=142990879]
+layout_mode = 0
+offset_left = 932.00006
+offset_top = -2.0
+offset_right = 972.00006
+offset_bottom = 22.0
+scale = Vector2(5.5600004, 5.5600004)
+text = "0"
+label_settings = SubResource("LabelSettings_5rwrc")
 
 [node name="Camera2D" type="Camera2D" parent="Gracz" unique_id=232602826]
 position = Vector2(0, -31)

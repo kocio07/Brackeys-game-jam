@@ -13,3 +13,4 @@ team:
 - [Modern User Interface](https://limezu.itch.io/modernuserinterface) (paid) -> UI
 - [Brackey's Adventure](https://brackeysgames.itch.io/brackeys-platformer-bundle) -> SFXs
 - [16 bit High Quality RPG music](https://hydrogene.itch.io/high-quality-16-bit-music) -> Music
+- [Skieleton Bones](https://mrchristos.itch.io/skeleton-bones-pixel-art-asset-pack) -> Interface
