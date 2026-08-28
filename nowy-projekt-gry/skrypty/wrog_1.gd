@@ -62,6 +62,7 @@ func defeat() -> void:
 	if is_dead:
 		return
 	is_dead = true
+	$"ouch sfx".play()
 	
 	$CollisionShape2D.set_deferred("disabled", true)
 	$weak/CollisionShape2D2.set_deferred("disabled", true)
