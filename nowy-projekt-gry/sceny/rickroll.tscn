@@ -44,10 +44,18 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=615292278]
-layout_mode = 0
-offset_left = 2.0
-offset_right = 856.0
-offset_bottom = 480.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -427.0
+offset_top = -240.0
+offset_right = 427.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
 stream = ExtResource("1_qtg40")
 autoplay = true
 script = ExtResource("2_amkgf")

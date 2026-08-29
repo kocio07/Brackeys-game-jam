@@ -744,7 +744,7 @@ tile_map_data = PackedByteArray("AAD7/wAAAgALAAUAAAD9//7/AgALAAUAAAD7/wIAAgADAAE
 tile_set = SubResource("TileSet_4vuit")
 
 [node name="Gracz" parent="." unique_id=724449849 instance=ExtResource("8_oxnlj")]
-position = Vector2(-12, -88)
+position = Vector2(12, -85)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Gracz" unique_id=182137539]
 
@@ -797,7 +797,7 @@ z_index = -1
 position = Vector2(10, 16)
 
 [node name="wrog 1" parent="." unique_id=1323484641 instance=ExtResource("10_7e6us")]
-position = Vector2(-152, -13)
+position = Vector2(263, -55)
 rotation = -0.0015106201
 collision_layer = 1
 collision_mask = 1
@@ -843,6 +843,7 @@ autoplay = "default"
 frame_progress = 0.55471605
 
 [node name="Checkpoint2" parent="." unique_id=1548016727 instance=ExtResource("9_7e6us")]
+z_index = -1
 position = Vector2(1719, 192)
 
 [node name="StaticBody2D" parent="." unique_id=230145025 instance=ExtResource("23_mny4e")]
@@ -853,6 +854,16 @@ position = Vector2(1922, 200)
 rotation = -0.0015106201
 collision_layer = 1
 collision_mask = 1
+
+[node name="TreeTrunk" type="Sprite2D" parent="." unique_id=957336644]
+z_index = -1
+position = Vector2(-83, 24)
+texture = ExtResource("22_mny4e")
+
+[node name="Rock" type="Sprite2D" parent="." unique_id=1131826925]
+z_index = -1
+position = Vector2(377, 24)
+texture = ExtResource("14_ghpb7")
 
 [connection signal="body_entered" from="wrog 2/text" to="Gracz" method="_on_text_body_entered"]
 [connection signal="body_entered" from="wrog 2/text" to="wrog 2" method="_on_text_body_entered"]
