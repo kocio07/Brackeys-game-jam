@@ -8,6 +8,7 @@ extends CharacterBody2D
 func _ready() -> void:
 	if Global.checkpoint_pos != Vector2(-999, -999):
 		global_position = Global.checkpoint_pos
+	await teleport_with_effect_out()
 	
 func _physics_process(delta: float) -> void:
 	
@@ -47,9 +48,10 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_next_level_body_entered(body: Node2D) -> void:
-	teleport_with_effect()
+	await teleport_with_effect_in()
+	get_tree().change_scene_to_file("res://sceny/level_2.tscn")
 	
-func teleport_with_effect():
+func teleport_with_effect_in():
 	var material = color_rect.material as ShaderMaterial
 	
 	var tween = create_tween()
@@ -59,9 +61,10 @@ func teleport_with_effect():
 		.set_ease(Tween.EASE_IN)
 	
 	await tween.finished
-	get_tree().change_scene_to_file("res://sceny/level_2.tscn")
-	
+func teleport_with_effect_out():
+	var material = color_rect.material as ShaderMaterial
 	var tween_out = create_tween()
 	tween_out.tween_property(material, "shader_parameter/progress", 0.0, 1.0)\
 		.set_trans(Tween.TRANS_QUAD)\
 		.set_ease(Tween.EASE_OUT)
+	await tween_out.finished
