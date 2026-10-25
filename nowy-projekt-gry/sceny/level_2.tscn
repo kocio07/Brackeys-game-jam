@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dgcj6bw0cemwi"]
+[gd_scene format=4 uid="uid://dgcj6bw0cemwi"]
 
 [ext_resource type="AudioStream" uid="uid://dlv0nige33idm" path="res://assets/music/11. Dangerous Cave.wav" id="1_d2sbq"]
 [ext_resource type="Texture2D" uid="uid://dbptuh0ix4gfa" path="res://assets/Rocky Roads/Tilesets/tileset_desert.png" id="2_irs44"]
@@ -13,6 +13,8 @@
 [ext_resource type="FontFile" uid="uid://bcrp3l0uldjoy" path="res://assets/augiepixel.ttf" id="11_sah3u"]
 [ext_resource type="Script" uid="uid://mklhaaoquak8" path="res://skrypty/dead_ui.gd" id="12_bpnmk"]
 [ext_resource type="Script" uid="uid://dlejojh77bppl" path="res://skrypty/timer.gd" id="13_7mycb"]
+[ext_resource type="PackedScene" uid="uid://d0b62vcx35get" path="res://sceny/killzone.tscn" id="14_s4xxt"]
+[ext_resource type="PackedScene" uid="uid://b35y6nixbafqb" path="res://sceny/checkpoint.tscn" id="15_sah3u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sah3u"]
 texture = ExtResource("2_irs44")
@@ -434,6 +436,7 @@ autoplay = true
 max_distance = 9.223372e+18
 
 [node name="MainMap" type="TileMapLayer" parent="." unique_id=1686375280]
+tile_map_data = PackedByteArray("AAD+/wAABAADAAEAAAD//wAABAADAAEAAAAAAAAABAADAAEAAAABAAAABAADAAEAAAACAAAABAADAAEAAAADAAAABAADAAEAAAAEAAAABAAEAAEAAAD9/wAABAACAAEAAAD9/wEABAACAAIAAAD8/wEABAABAAIAAAAFAAEABAAFAAIAAAAEAAEABAAEAAIAAAAFAAIABAAFAAMAAAAFAAMABAAFAAMAAAD8/wIABAABAAMAAAD8/wMABAABAAMAAAD9/wQABAADAAMAAAD+/wQABAACAAMAAAD//wQABAADAAMAAAAAAAQABAAEAAMAAAABAAQABAADAAMAAAACAAQABAADAAMAAAADAAQABAADAAMAAAAEAAQABAADAAMAAAAFAAQABAAFAAMAAAD8/wQABAABAAMAAAD9/wMABAACAAMAAAD+/wMABAADAAMAAAD//wMABAAEAAMAAAD+/wIABAACAAMAAAD//wIABAADAAMAAAAAAAIABAAEAAMAAAD//wEABAACAAMAAAAAAAEABAADAAMAAAABAAEABAACAAMAAAABAAIABAADAAIAAAACAAIABAADAAMAAAADAAIABAAEAAMAAAACAAEABAADAAMAAAADAAEABAAEAAMAAAD9/wIABAADAAIAAAABAAMABAADAAIAAAAEAAIABAADAAIAAAAAAAMABAADAAMAAAAEAAMABAADAAMAAAACAAMABAADAAMAAAADAAMABAADAAMAAAD+/wEABAADAAMAAAD9/wUABAAEAAMAAAD+/wUABAADAAMAAAD//wUABAADAAMAAAAAAAUABAADAAMAAAABAAUABAADAAMAAAACAAUABAADAAMAAAADAAUABAAEAAMAAAAEAAUABAADAAMAAAD9/wYABAADAAMAAAD+/wYABAADAAMAAAD//wYABAAEAAMAAAAAAAYABAADAAMAAAABAAYABAACAAMAAAACAAYABAADAAMAAAADAAYABAADAAMAAAAEAAYABAACAAMAAAAFAAUABAAFAAMAAAAFAAYABAAFAAMAAAAFAAcABAAFAAQAAAD8/wUABAABAAMAAAD8/wYABAABAAMAAAD8/wcABAABAAQAAAD9/wcABAACAAQAAAD+/wcABAADAAQAAAD//wcABAAEAAQAAAAAAAcABAACAAQAAAABAAcABAADAAQAAAACAAcABAACAAQAAAADAAcABAADAAQAAAAEAAcABAAEAAQAAAA=")
 tile_set = SubResource("TileSet_mlreh")
 
 [node name="Gracz" parent="." unique_id=724449849 instance=ExtResource("9_nca4t")]
@@ -481,3 +484,10 @@ position = Vector2(0, -31)
 zoom = Vector2(3, 3)
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
+
+[node name="Killzone" parent="." unique_id=2090855984 instance=ExtResource("14_s4xxt")]
+position = Vector2(175, 303)
+
+[node name="Checkpoint" parent="." unique_id=666461698 instance=ExtResource("15_sah3u")]
+z_index = -1
+position = Vector2(11, -16)
