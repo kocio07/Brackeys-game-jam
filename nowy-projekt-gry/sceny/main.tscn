@@ -17,11 +17,11 @@
 [ext_resource type="Texture2D" uid="uid://b55s3c7atwr17" path="res://assets/Rocky Roads/Deco/rock.png" id="14_ghpb7"]
 [ext_resource type="Texture2D" uid="uid://b2y5t5nu8fwx5" path="res://assets/Skeleton_Bones/Pixel_Size_64x64/Skull_Normal.png" id="15_pbd1v"]
 [ext_resource type="PackedScene" uid="uid://bmhvq6x7i7i6e" path="res://killzone_wall.tscn" id="15_rr6wh"]
-[ext_resource type="Script" uid="uid://mklhaaoquak8" path="res://sceny/dead_ui.gd" id="16_oh337"]
+[ext_resource type="Script" uid="uid://mklhaaoquak8" path="res://skrypty/dead_ui.gd" id="16_oh337"]
 [ext_resource type="PackedScene" uid="uid://bomkomr5urnuq" path="res://sceny/killzone-text.tscn" id="16_v4v28"]
-[ext_resource type="Script" uid="uid://dlejojh77bppl" path="res://sceny/timer.gd" id="17_j0ig8"]
-[ext_resource type="Script" uid="uid://baj6j84d0ptrq" path="res://sceny/en_text.gd" id="17_vf4ao"]
-[ext_resource type="Script" uid="uid://byrf5bnj0fglx" path="res://sceny/label_7.gd" id="18_avd7h"]
+[ext_resource type="Script" uid="uid://dlejojh77bppl" path="res://skrypty/timer.gd" id="17_j0ig8"]
+[ext_resource type="Script" uid="uid://baj6j84d0ptrq" path="res://skrypty/en_text.gd" id="17_vf4ao"]
+[ext_resource type="Script" uid="uid://byrf5bnj0fglx" path="res://skrypty/label_7.gd" id="18_avd7h"]
 [ext_resource type="Texture2D" uid="uid://dmpvwgndhcuh6" path="res://assets/Rocky Roads/Objects/flag.png" id="19_aclmx"]
 [ext_resource type="Texture2D" uid="uid://b3l7ivrduulsg" path="res://assets/Rocky Roads/Deco/tree.png" id="21_06eqf"]
 [ext_resource type="Texture2D" uid="uid://dwojierx4qbx" path="res://assets/Rocky Roads/Deco/tree_trunk.png" id="22_mny4e"]
@@ -592,6 +592,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vtfqq"]
+size = Vector2(20, 34.399994)
+
 [node name="Main" type="Node2D" unique_id=152126973]
 
 [node name="DEcoariotns" type="Node2D" parent="." unique_id=37732064]
@@ -903,12 +906,21 @@ z_index = -1
 position = Vector2(377, 24)
 texture = ExtResource("14_ghpb7")
 
-[node name="next level" type="AnimatedSprite2D" parent="." unique_id=571278658]
-position = Vector2(3129, 140)
+[node name="next level" type="Area2D" parent="." unique_id=1931994710]
+
+[node name="next level" type="AnimatedSprite2D" parent="next level" unique_id=571278658]
+position = Vector2(3129.0002, 136)
 scale = Vector2(1.25, 1.25)
 sprite_frames = SubResource("SpriteFrames_vtfqq")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="next level" unique_id=1742056232]
+position = Vector2(3129.0002, 137.5)
+scale = Vector2(1.25, 1.25)
+shape = SubResource("RectangleShape2D_vtfqq")
 
 [connection signal="body_entered" from="wrog 2/text" to="Gracz" method="_on_text_body_entered"]
 [connection signal="body_entered" from="wrog 2/text" to="wrog 2" method="_on_text_body_entered"]
+[connection signal="body_entered" from="next level" to="Gracz" method="_on_next_level_body_entered"]
 
 [editable path="wrog 2"]

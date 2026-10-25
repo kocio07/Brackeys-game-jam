@@ -42,3 +42,7 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite2D.play("Jump")
 		
 	move_and_slide()
+
+
+func _on_next_level_body_entered(body: Node2D) -> void:
+	get_tree().change_scene_to_file("res://sceny/level_2.tscn")

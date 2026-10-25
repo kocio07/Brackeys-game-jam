@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bomkomr5urnuq"]
 
-[ext_resource type="Script" uid="uid://dox2o414klyqj" path="res://killzone-text.gd" id="1_mv82i"]
+[ext_resource type="Script" uid="uid://dox2o414klyqj" path="res://skrypty/killzone-text.gd" id="1_mv82i"]
 [ext_resource type="FontFile" uid="uid://bcrp3l0uldjoy" path="res://assets/augiepixel.ttf" id="2_q0sd0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rr6wh"]
