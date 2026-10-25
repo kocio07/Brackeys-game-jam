@@ -1,6 +1,5 @@
 [gd_scene format=4 uid="uid://dgcj6bw0cemwi"]
 
-[ext_resource type="AudioStream" uid="uid://dlv0nige33idm" path="res://assets/music/11. Dangerous Cave.wav" id="1_d2sbq"]
 [ext_resource type="Texture2D" uid="uid://dbptuh0ix4gfa" path="res://assets/Rocky Roads/Tilesets/tileset_desert.png" id="2_irs44"]
 [ext_resource type="Texture2D" uid="uid://bc0ad3b7yi710" path="res://assets/Rocky Roads/Tilesets/tileset_dirt.png" id="3_lx01c"]
 [ext_resource type="Texture2D" uid="uid://bl04dcoxn0kqn" path="res://assets/Rocky Roads/Tilesets/tileset_forest.png" id="4_pjdm2"]
@@ -14,6 +13,7 @@
 [ext_resource type="Script" uid="uid://mklhaaoquak8" path="res://skrypty/dead_ui.gd" id="12_bpnmk"]
 [ext_resource type="Script" uid="uid://dlejojh77bppl" path="res://skrypty/timer.gd" id="13_7mycb"]
 [ext_resource type="PackedScene" uid="uid://d0b62vcx35get" path="res://sceny/killzone.tscn" id="14_s4xxt"]
+[ext_resource type="PackedScene" uid="uid://c4wxqd7eix0ep" path="res://sceny/audio_stream_player_2d.tscn" id="15_bpnmk"]
 [ext_resource type="PackedScene" uid="uid://b35y6nixbafqb" path="res://sceny/checkpoint.tscn" id="15_sah3u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sah3u"]
@@ -429,12 +429,6 @@ font_size = 89
 
 [node name="Level 2" type="Node2D" unique_id=1899524453]
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1534298021]
-position = Vector2(442, 70)
-stream = ExtResource("1_d2sbq")
-autoplay = true
-max_distance = 9.223372e+18
-
 [node name="MainMap" type="TileMapLayer" parent="." unique_id=1686375280]
 tile_map_data = PackedByteArray("AAD+/wAABAADAAEAAAD//wAABAADAAEAAAAAAAAABAADAAEAAAABAAAABAADAAEAAAACAAAABAADAAEAAAADAAAABAADAAEAAAAEAAAABAAEAAEAAAD9/wAABAACAAEAAAD9/wEABAACAAIAAAD8/wEABAABAAIAAAAFAAEABAAFAAIAAAAEAAEABAAEAAIAAAAFAAIABAAFAAMAAAAFAAMABAAFAAMAAAD8/wIABAABAAMAAAD8/wMABAABAAMAAAD9/wQABAADAAMAAAD+/wQABAACAAMAAAD//wQABAADAAMAAAAAAAQABAAEAAMAAAABAAQABAADAAMAAAACAAQABAADAAMAAAADAAQABAADAAMAAAAEAAQABAADAAMAAAAFAAQABAAFAAMAAAD8/wQABAABAAMAAAD9/wMABAACAAMAAAD+/wMABAADAAMAAAD//wMABAAEAAMAAAD+/wIABAACAAMAAAD//wIABAADAAMAAAAAAAIABAAEAAMAAAD//wEABAACAAMAAAAAAAEABAADAAMAAAABAAEABAACAAMAAAABAAIABAADAAIAAAACAAIABAADAAMAAAADAAIABAAEAAMAAAACAAEABAADAAMAAAADAAEABAAEAAMAAAD9/wIABAADAAIAAAABAAMABAADAAIAAAAEAAIABAADAAIAAAAAAAMABAADAAMAAAAEAAMABAADAAMAAAACAAMABAADAAMAAAADAAMABAADAAMAAAD+/wEABAADAAMAAAD9/wUABAAEAAMAAAD+/wUABAADAAMAAAD//wUABAADAAMAAAAAAAUABAADAAMAAAABAAUABAADAAMAAAACAAUABAADAAMAAAADAAUABAAEAAMAAAAEAAUABAADAAMAAAD9/wYABAADAAMAAAD+/wYABAADAAMAAAD//wYABAAEAAMAAAAAAAYABAADAAMAAAABAAYABAACAAMAAAACAAYABAADAAMAAAADAAYABAADAAMAAAAEAAYABAACAAMAAAAFAAUABAAFAAMAAAAFAAYABAAFAAMAAAAFAAcABAAFAAQAAAD8/wUABAABAAMAAAD8/wYABAABAAMAAAD8/wcABAABAAQAAAD9/wcABAACAAQAAAD+/wcABAADAAQAAAD//wcABAAEAAQAAAAAAAcABAACAAQAAAABAAcABAADAAQAAAACAAcABAACAAQAAAADAAcABAADAAQAAAAEAAcABAAEAAQAAAA=")
 tile_set = SubResource("TileSet_mlreh")
@@ -442,15 +436,15 @@ tile_set = SubResource("TileSet_mlreh")
 [node name="Gracz" parent="." unique_id=724449849 instance=ExtResource("9_nca4t")]
 position = Vector2(12, -85)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Gracz" unique_id=722625332]
+[node name="CanvasLayer2" type="CanvasLayer" parent="Gracz" unique_id=722625332]
 
-[node name="Control" type="Control" parent="Gracz/CanvasLayer" unique_id=884027802]
+[node name="Control" type="Control" parent="Gracz/CanvasLayer2" unique_id=884027802]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="TextureRect" type="TextureRect" parent="Gracz/CanvasLayer/Control" unique_id=546745209]
+[node name="TextureRect" type="TextureRect" parent="Gracz/CanvasLayer2/Control" unique_id=546745209]
 layout_mode = 0
 offset_left = 1040.0
 offset_top = 9.0
@@ -458,7 +452,7 @@ offset_right = 1136.0
 offset_bottom = 104.0
 texture = ExtResource("10_s4xxt")
 
-[node name="Label" type="Label" parent="Gracz/CanvasLayer/Control" unique_id=1074799545]
+[node name="Label" type="Label" parent="Gracz/CanvasLayer2/Control" unique_id=1074799545]
 layout_mode = 0
 offset_left = 932.00006
 offset_top = -2.0
@@ -469,7 +463,7 @@ text = "0"
 label_settings = SubResource("LabelSettings_b2vob")
 script = ExtResource("12_bpnmk")
 
-[node name="Label2" type="Label" parent="Gracz/CanvasLayer/Control" unique_id=437647144]
+[node name="Label2" type="Label" parent="Gracz/CanvasLayer2/Control" unique_id=437647144]
 layout_mode = 0
 offset_left = 29.0
 offset_top = 20.0
@@ -491,3 +485,5 @@ position = Vector2(175, 303)
 [node name="Checkpoint" parent="." unique_id=666461698 instance=ExtResource("15_sah3u")]
 z_index = -1
 position = Vector2(11, -16)
+
+[node name="AudioStreamPlayer2D" parent="." unique_id=1430178328 instance=ExtResource("15_bpnmk")]

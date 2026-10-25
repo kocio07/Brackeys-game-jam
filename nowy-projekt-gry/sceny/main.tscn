@@ -12,18 +12,15 @@
 [ext_resource type="Texture2D" uid="uid://d0ujw7vo81npb" path="res://assets/Rocky Roads/Deco/clouds.png" id="9_pi7gf"]
 [ext_resource type="PackedScene" uid="uid://deanx3wosse4c" path="res://sceny/wrog_1.tscn" id="10_7e6us"]
 [ext_resource type="FontFile" uid="uid://bcrp3l0uldjoy" path="res://assets/augiepixel.ttf" id="12_lhsd8"]
-[ext_resource type="AudioStream" uid="uid://dlv0nige33idm" path="res://assets/music/11. Dangerous Cave.wav" id="13_aclmx"]
 [ext_resource type="Texture2D" uid="uid://b56tvv2yvkosa" path="res://assets/Rocky Roads/Deco/bush.png" id="13_cwrqu"]
 [ext_resource type="Texture2D" uid="uid://b55s3c7atwr17" path="res://assets/Rocky Roads/Deco/rock.png" id="14_ghpb7"]
-[ext_resource type="Texture2D" uid="uid://b2y5t5nu8fwx5" path="res://assets/Skeleton_Bones/Pixel_Size_64x64/Skull_Normal.png" id="15_pbd1v"]
 [ext_resource type="PackedScene" uid="uid://bmhvq6x7i7i6e" path="res://killzone_wall.tscn" id="15_rr6wh"]
-[ext_resource type="Script" uid="uid://mklhaaoquak8" path="res://skrypty/dead_ui.gd" id="16_oh337"]
 [ext_resource type="PackedScene" uid="uid://bomkomr5urnuq" path="res://sceny/killzone-text.tscn" id="16_v4v28"]
-[ext_resource type="Script" uid="uid://dlejojh77bppl" path="res://skrypty/timer.gd" id="17_j0ig8"]
 [ext_resource type="Script" uid="uid://baj6j84d0ptrq" path="res://skrypty/en_text.gd" id="17_vf4ao"]
 [ext_resource type="Script" uid="uid://byrf5bnj0fglx" path="res://skrypty/label_7.gd" id="18_avd7h"]
 [ext_resource type="Texture2D" uid="uid://dmpvwgndhcuh6" path="res://assets/Rocky Roads/Objects/flag.png" id="19_aclmx"]
 [ext_resource type="Texture2D" uid="uid://b3l7ivrduulsg" path="res://assets/Rocky Roads/Deco/tree.png" id="21_06eqf"]
+[ext_resource type="PackedScene" uid="uid://c4wxqd7eix0ep" path="res://sceny/audio_stream_player_2d.tscn" id="21_873jp"]
 [ext_resource type="Texture2D" uid="uid://dwojierx4qbx" path="res://assets/Rocky Roads/Deco/tree_trunk.png" id="22_mny4e"]
 [ext_resource type="PackedScene" uid="uid://vni8euhrhfhl" path="res://sceny/invisible_block.tscn" id="23_mny4e"]
 [ext_resource type="Texture2D" uid="uid://dywptawwslwkx" path="res://assets/portal/Dimensional_Portal.png" id="27_873jp"]
@@ -58,7 +55,7 @@ font = ExtResource("12_lhsd8")
 [sub_resource type="LabelSettings" id="LabelSettings_iv05c"]
 font = ExtResource("12_lhsd8")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ghpb7"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ba5tg"]
 texture = ExtResource("1_fdwem")
 3:0/0 = 0
 4:0/0 = 0
@@ -116,7 +113,7 @@ texture = ExtResource("1_fdwem")
 6:4/0 = 0
 6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rr6wh"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vvy6p"]
 texture = ExtResource("2_oxnlj")
 2:1/0 = 0
 2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -171,7 +168,7 @@ texture = ExtResource("2_oxnlj")
 6:4/0 = 0
 6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v4v28"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yjrux"]
 texture = ExtResource("3_6avht")
 2:0/0 = 0
 3:0/0 = 0
@@ -231,7 +228,7 @@ texture = ExtResource("3_6avht")
 6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 11:5/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vf4ao"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dfprt"]
 texture = ExtResource("4_7e6us")
 2:0/0 = 0
 4:0/0 = 0
@@ -315,7 +312,7 @@ texture = ExtResource("4_7e6us")
 11:5/0 = 0
 11:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_avd7h"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jnsyl"]
 texture = ExtResource("5_5atrl")
 2:0/0 = 0
 3:0/0 = 0
@@ -375,7 +372,7 @@ texture = ExtResource("5_5atrl")
 10:5/0 = 0
 10:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aclmx"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6ockn"]
 texture = ExtResource("6_lhsd8")
 2:0/0 = 0
 3:0/0 = 0
@@ -436,7 +433,7 @@ texture = ExtResource("6_lhsd8")
 6:4/0 = 0
 6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oxg6p"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dy4ac"]
 texture = ExtResource("9_pi7gf")
 0:0/0 = 0
 1:0/0 = 0
@@ -452,21 +449,13 @@ texture = ExtResource("9_pi7gf")
 
 [sub_resource type="TileSet" id="TileSet_4vuit"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_ghpb7")
-sources/1 = SubResource("TileSetAtlasSource_rr6wh")
-sources/2 = SubResource("TileSetAtlasSource_v4v28")
-sources/3 = SubResource("TileSetAtlasSource_vf4ao")
-sources/4 = SubResource("TileSetAtlasSource_avd7h")
-sources/5 = SubResource("TileSetAtlasSource_aclmx")
-sources/6 = SubResource("TileSetAtlasSource_oxg6p")
-
-[sub_resource type="LabelSettings" id="LabelSettings_5rwrc"]
-font = ExtResource("12_lhsd8")
-font_size = 23
-
-[sub_resource type="LabelSettings" id="LabelSettings_5wi87"]
-font = ExtResource("12_lhsd8")
-font_size = 89
+sources/0 = SubResource("TileSetAtlasSource_ba5tg")
+sources/1 = SubResource("TileSetAtlasSource_vvy6p")
+sources/2 = SubResource("TileSetAtlasSource_yjrux")
+sources/3 = SubResource("TileSetAtlasSource_dfprt")
+sources/4 = SubResource("TileSetAtlasSource_jnsyl")
+sources/5 = SubResource("TileSetAtlasSource_6ockn")
+sources/6 = SubResource("TileSetAtlasSource_dy4ac")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4vuit"]
 size = Vector2(14.736389, 20.013577)
@@ -785,44 +774,7 @@ tile_map_data = PackedByteArray("AAD7/wAAAgALAAUAAAD9//7/AgALAAUAAAD7/wIAAgADAAE
 tile_set = SubResource("TileSet_4vuit")
 
 [node name="Gracz" parent="." unique_id=724449849 instance=ExtResource("8_oxnlj")]
-position = Vector2(12, -85)
-
-[node name="CanvasLayer" type="CanvasLayer" parent="Gracz" unique_id=182137539]
-
-[node name="Control" type="Control" parent="Gracz/CanvasLayer" unique_id=1346298046]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="TextureRect" type="TextureRect" parent="Gracz/CanvasLayer/Control" unique_id=775339713]
-layout_mode = 0
-offset_left = 1040.0
-offset_top = 9.0
-offset_right = 1136.0
-offset_bottom = 104.0
-texture = ExtResource("15_pbd1v")
-
-[node name="Label" type="Label" parent="Gracz/CanvasLayer/Control" unique_id=142990879]
-layout_mode = 0
-offset_left = 932.00006
-offset_top = -2.0
-offset_right = 972.00006
-offset_bottom = 22.0
-scale = Vector2(5.5600004, 5.5600004)
-text = "0"
-label_settings = SubResource("LabelSettings_5rwrc")
-script = ExtResource("16_oh337")
-
-[node name="Label2" type="Label" parent="Gracz/CanvasLayer/Control" unique_id=103730341]
-layout_mode = 0
-offset_left = 29.0
-offset_top = 20.0
-offset_right = 174.0
-offset_bottom = 96.0
-text = "01:10"
-label_settings = SubResource("LabelSettings_5wi87")
-script = ExtResource("17_j0ig8")
+position = Vector2(11, -74)
 
 [node name="Camera2D" type="Camera2D" parent="Gracz" unique_id=232602826]
 position = Vector2(0, -31)
@@ -843,11 +795,8 @@ rotation = -0.0015106201
 collision_layer = 1
 collision_mask = 1
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=483186237]
+[node name="AudioStreamPlayer2D" parent="." unique_id=1430178328 instance=ExtResource("21_873jp")]
 position = Vector2(442, 70)
-stream = ExtResource("13_aclmx")
-autoplay = true
-max_distance = 9.223372e+18
 
 [node name="Killzone2" parent="." unique_id=944250529 instance=ExtResource("15_rr6wh")]
 position = Vector2(388, -31)

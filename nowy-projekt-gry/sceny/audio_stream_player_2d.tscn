@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c4wxqd7eix0ep"]
+
+[ext_resource type="AudioStream" uid="uid://dlv0nige33idm" path="res://assets/music/11. Dangerous Cave.wav" id="1_7hj8q"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" unique_id=1430178328]
+stream = ExtResource("1_7hj8q")
+autoplay = true
+max_distance = 9.223372e+18

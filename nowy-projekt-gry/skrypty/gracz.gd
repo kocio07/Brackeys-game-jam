@@ -3,6 +3,8 @@ extends CharacterBody2D
 @export var gravity = 1000
 @export var jump_force = 183
 
+@onready var color_rect = $CanvasLayer2/ColorRect
+
 func _ready() -> void:
 	if Global.checkpoint_pos != Vector2(-999, -999):
 		global_position = Global.checkpoint_pos
@@ -45,4 +47,21 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_next_level_body_entered(body: Node2D) -> void:
+	teleport_with_effect()
+	
+func teleport_with_effect():
+	var material = color_rect.material as ShaderMaterial
+	
+	var tween = create_tween()
+	
+	tween.tween_property(material, "shader_parameter/progress", 1.0, 1.0)\
+		.set_trans(Tween.TRANS_QUAD)\
+		.set_ease(Tween.EASE_IN)
+	
+	await tween.finished
 	get_tree().change_scene_to_file("res://sceny/level_2.tscn")
+	
+	var tween_out = create_tween()
+	tween_out.tween_property(material, "shader_parameter/progress", 0.0, 1.0)\
+		.set_trans(Tween.TRANS_QUAD)\
+		.set_ease(Tween.EASE_OUT)
