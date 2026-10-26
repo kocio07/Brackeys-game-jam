@@ -15,3 +15,5 @@ team:
 - [16 bit High Quality RPG music](https://hydrogene.itch.io/high-quality-16-bit-music) -> Music
 - [Skieleton Bones](https://mrchristos.itch.io/skeleton-bones-pixel-art-asset-pack) -> Interface
 - [Pixel Dimensional Portal](https://pixelnauta.itch.io/pixel-dimensional-portal-32x32) -> Portal
+- [Pixel Art Projectile Effects](https://gandalfhardcore.itch.io/pixel-art-projectile-effects) -> Wepons effects
+- [Guns Reloads](https://c1aymor3.itch.io/guns-reloads) -> Wepons
