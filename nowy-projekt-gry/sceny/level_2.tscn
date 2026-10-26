@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dlhsip3o77prx" path="res://assets/Rocky Roads/Tilesets/tileset_water.png" id="7_nca4t"]
 [ext_resource type="Texture2D" uid="uid://d0ujw7vo81npb" path="res://assets/Rocky Roads/Deco/clouds.png" id="8_s4xxt"]
 [ext_resource type="PackedScene" uid="uid://cohsbpcu4rhms" path="res://sceny/gracz.tscn" id="9_nca4t"]
+[ext_resource type="FontFile" uid="uid://bcrp3l0uldjoy" path="res://assets/augiepixel.ttf" id="12_yvav6"]
 [ext_resource type="PackedScene" uid="uid://d0b62vcx35get" path="res://sceny/killzone.tscn" id="14_s4xxt"]
 [ext_resource type="PackedScene" uid="uid://c4wxqd7eix0ep" path="res://sceny/audio_stream_player_2d.tscn" id="15_bpnmk"]
 [ext_resource type="PackedScene" uid="uid://b35y6nixbafqb" path="res://sceny/checkpoint.tscn" id="15_sah3u"]
@@ -415,6 +416,9 @@ sources/4 = SubResource("TileSetAtlasSource_au3bg")
 sources/5 = SubResource("TileSetAtlasSource_f7kik")
 sources/6 = SubResource("TileSetAtlasSource_a56qp")
 
+[sub_resource type="LabelSettings" id="LabelSettings_nca4t"]
+font = ExtResource("12_yvav6")
+
 [node name="Level 2" type="Node2D" unique_id=1899524453]
 
 [node name="MainMap" type="TileMapLayer" parent="." unique_id=1686375280]
@@ -438,3 +442,19 @@ z_index = -1
 position = Vector2(11, -16)
 
 [node name="AudioStreamPlayer2D" parent="." unique_id=1430178328 instance=ExtResource("15_bpnmk")]
+
+[node name="Labels" type="Control" parent="." unique_id=2047804224]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Labels" unique_id=2009302442]
+layout_mode = 0
+offset_left = -44.0
+offset_top = -101.0
+offset_right = 67.0
+offset_bottom = -66.0
+text = "wow this is next
+level of tutorial"
+label_settings = SubResource("LabelSettings_nca4t")
