@@ -1,9 +1,18 @@
 extends Area2D
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var label: Label = $"../Labels/Label2"
 
 func _ready() -> void:
 	start_jumping()
+
+func _on_body_entered(body: Node2D) -> void:
+	if body.is_in_group("gracz"):
+		visible = false
+		Global.has_weapon = true
+		Global.weapon = 1
+		label.text = "Click E..."
+		
 
 func start_jumping() -> void:
 	var base_y = animated_sprite.position.y

@@ -472,12 +472,22 @@ offset_bottom = 40.0
 
 [node name="Label" type="Label" parent="Labels" unique_id=2009302442]
 layout_mode = 0
-offset_left = -44.0
-offset_top = -101.0
-offset_right = 67.0
-offset_bottom = -66.0
+offset_left = -127.0
+offset_top = -86.0
+offset_right = -16.0
+offset_bottom = -51.0
 text = "wow this is next
 level of tutorial"
+label_settings = SubResource("LabelSettings_nca4t")
+
+[node name="Label2" type="Label" parent="Labels" unique_id=652405036]
+layout_mode = 0
+offset_left = 16.0
+offset_top = -65.0
+offset_right = 103.0
+offset_bottom = -30.0
+text = "wait...
+what is this?"
 label_settings = SubResource("LabelSettings_nca4t")
 
 [node name="wrog 1" parent="." unique_id=1323484641 instance=ExtResource("13_nca4t")]
@@ -497,3 +507,5 @@ shape = SubResource("RectangleShape2D_7mycb")
 position = Vector2(57.000004, -13.999999)
 scale = Vector2(0.11702126, 0.11702131)
 sprite_frames = SubResource("SpriteFrames_vtfqq")
+
+[connection signal="body_entered" from="firts wepon" to="firts wepon" method="_on_body_entered"]

@@ -2,8 +2,12 @@ extends CharacterBody2D
 @export var speed = 155
 @export var gravity = 1000
 @export var jump_force = 183
+@export var weapon_speed = 200.0
+@export var direction = 1
 
 @onready var color_rect = $CanvasLayer2/ColorRect
+@onready var weapon_effect: AnimatedSprite2D = $WeaponEffect
+@onready var muzzle: Marker2D = $Muzzle
 
 func _ready() -> void:
 	if Global.checkpoint_pos != Vector2(-999, -999):
@@ -12,7 +16,7 @@ func _ready() -> void:
 	
 func _physics_process(delta: float) -> void:
 	
-	var direction = Input.get_axis("left", "right")
+	direction = Input.get_axis("left", "right")
 	
 	if direction:
 		velocity.x = direction * speed
@@ -68,3 +72,28 @@ func teleport_with_effect_out():
 		.set_trans(Tween.TRANS_QUAD)\
 		.set_ease(Tween.EASE_OUT)
 	await tween_out.finished
+	
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("shoot"):
+		try_to_shoot()
+		
+func try_to_shoot() -> void:
+	if Global.has_weapon == true:
+		if Global.weapon == 1:
+			shoot_level_one()
+		elif Global.weapon == 0:
+			pass
+	else:
+		pass
+		
+func shoot_level_one() -> void:
+	if direction == 1:
+		weapon_effect.flip_h = false
+	elif direction  == -1:
+		weapon_effect.flip_h = true
+		
+	weapon_effect.visible = true
+	weapon_effect.play("1")
+
+func _on_weapon_effect_animation_finished() -> void:
+	weapon_effect.visible = false
