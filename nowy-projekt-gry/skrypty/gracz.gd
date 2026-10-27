@@ -1,12 +1,13 @@
 extends CharacterBody2D 
+
 @export var speed = 155
 @export var gravity = 1000
 @export var jump_force = 183
 @export var weapon_speed = 200.0
 @export var direction = 1
+@export var bullet_scene: PackedScene
 
 @onready var color_rect = $CanvasLayer2/ColorRect
-@onready var weapon_effect: AnimatedSprite2D = $WeaponEffect
 @onready var muzzle: Marker2D = $Muzzle
 
 func _ready() -> void:
@@ -15,7 +16,6 @@ func _ready() -> void:
 	await teleport_with_effect_out()
 	
 func _physics_process(delta: float) -> void:
-	
 	direction = Input.get_axis("left", "right")
 	
 	if direction:
@@ -27,29 +27,23 @@ func _physics_process(delta: float) -> void:
 		if is_on_floor():
 			$AnimatedSprite2D.play("Idle")
 		
-	#Obracanie duszka
-	
+	# Obracanie duszka
 	if direction == 1:
 		$AnimatedSprite2D.flip_h = false
 	elif direction == -1:
 		$AnimatedSprite2D.flip_h = true
 		
-		
-	#Grawitacja
-	
+	# Grawitacja
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	
-	#Skok
-	
+	# Skok
 	if Input.is_action_just_pressed("jump") and is_on_floor():
-		
 		velocity.y -= jump_force
 		$"Skok sfx".play()
 		$AnimatedSprite2D.play("Jump")
 		
 	move_and_slide()
-
 
 func _on_next_level_body_entered(body: Node2D) -> void:
 	await teleport_with_effect_in()
@@ -57,14 +51,12 @@ func _on_next_level_body_entered(body: Node2D) -> void:
 	
 func teleport_with_effect_in():
 	var material = color_rect.material as ShaderMaterial
-	
 	var tween = create_tween()
-	
 	tween.tween_property(material, "shader_parameter/progress", 1.0, 1.0)\
 		.set_trans(Tween.TRANS_QUAD)\
 		.set_ease(Tween.EASE_IN)
-	
 	await tween.finished
+
 func teleport_with_effect_out():
 	var material = color_rect.material as ShaderMaterial
 	var tween_out = create_tween()
@@ -87,13 +79,22 @@ func try_to_shoot() -> void:
 		pass
 		
 func shoot_level_one() -> void:
-	if direction == 1:
-		weapon_effect.flip_h = false
-	elif direction  == -1:
-		weapon_effect.flip_h = true
+	var shoot_dir = 1
+	if $AnimatedSprite2D.flip_h:
+		shoot_dir = -1
+		muzzle.position.x = -abs(muzzle.position.x)
+	else:
+		shoot_dir = 1
+		muzzle.position.x = abs(muzzle.position.x)
 		
-	weapon_effect.visible = true
-	weapon_effect.play("1")
+	if bullet_scene:
+		var bullet = bullet_scene.instantiate() as Node2D
+		bullet.global_position = muzzle.global_position
+		bullet.direction = shoot_dir
+		
+		if shoot_dir == -1:
+			var anim_node = bullet.get_node_or_null("Bullet")
+			if anim_node:
+				anim_node.flip_h = true
 
-func _on_weapon_effect_animation_finished() -> void:
-	weapon_effect.visible = false
+		get_tree().current_scene.add_child(bullet)
