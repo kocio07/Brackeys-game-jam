@@ -257,13 +257,13 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4vuit"]
-size = Vector2(30, 11)
+size = Vector2(12, 11)
 
 [node name="Bullet" type="Area2D" unique_id=163866233]
 script = ExtResource("1_wcijj")
 
 [node name="Bullet" type="AnimatedSprite2D" parent="." unique_id=1680308897]
-position = Vector2(21, 4)
+position = Vector2(2.2737368e-13, 2.3841858e-07)
 scale = Vector2(0.6666667, 0.6666667)
 sprite_frames = SubResource("SpriteFrames_4vuit")
 animation = &"1"
@@ -272,7 +272,7 @@ speed_scale = 2.5
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1372106027]
-position = Vector2(24, 4.5)
+position = Vector2(12, 1)
 shape = SubResource("RectangleShape2D_4vuit")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

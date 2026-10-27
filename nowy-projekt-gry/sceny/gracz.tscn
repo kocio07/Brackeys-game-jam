@@ -233,4 +233,4 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Muzzle" type="Marker2D" parent="." unique_id=459070956]
-position = Vector2(21, 4)
+position = Vector2(0, 4)

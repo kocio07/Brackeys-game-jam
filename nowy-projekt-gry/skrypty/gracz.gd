@@ -82,19 +82,14 @@ func shoot_level_one() -> void:
 	var shoot_dir = 1
 	if $AnimatedSprite2D.flip_h:
 		shoot_dir = -1
-		muzzle.position.x = -abs(muzzle.position.x)
+		muzzle.position.x = -18
 	else:
 		shoot_dir = 1
-		muzzle.position.x = abs(muzzle.position.x)
+		muzzle.position.x = 18
 		
 	if bullet_scene:
 		var bullet = bullet_scene.instantiate() as Node2D
 		bullet.global_position = muzzle.global_position
 		bullet.direction = shoot_dir
 		
-		if shoot_dir == -1:
-			var anim_node = bullet.get_node_or_null("Bullet")
-			if anim_node:
-				anim_node.flip_h = true
-
 		get_tree().current_scene.add_child(bullet)
