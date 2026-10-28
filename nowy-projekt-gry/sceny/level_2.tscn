@@ -13,7 +13,6 @@
 [ext_resource type="Script" uid="uid://5381bghkjoni" path="res://sceny/firts_wepon.gd" id="14_bpnmk"]
 [ext_resource type="PackedScene" uid="uid://d0b62vcx35get" path="res://sceny/killzone.tscn" id="14_s4xxt"]
 [ext_resource type="Texture2D" uid="uid://lm7b4crp0eak" path="res://assets/Medieval weapons pack/Wands/Wands-x6.png" id="14_sah3u"]
-[ext_resource type="PackedScene" uid="uid://c4wxqd7eix0ep" path="res://sceny/audio_stream_player_2d.tscn" id="15_bpnmk"]
 [ext_resource type="PackedScene" uid="uid://b35y6nixbafqb" path="res://sceny/checkpoint.tscn" id="15_sah3u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sah3u"]
@@ -461,8 +460,6 @@ position = Vector2(175, 303)
 [node name="Checkpoint" parent="." unique_id=666461698 instance=ExtResource("15_sah3u")]
 z_index = -1
 position = Vector2(11, -16)
-
-[node name="AudioStreamPlayer2D" parent="." unique_id=1430178328 instance=ExtResource("15_bpnmk")]
 
 [node name="Labels" type="Control" parent="." unique_id=2047804224]
 layout_mode = 3

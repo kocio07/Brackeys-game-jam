@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cx2ldjusm33eb" path="res://assets/paid/GandalfHardcore Projectiles and effects/GandalfHardcore Projectiles2.png" id="1_n8whv"]
 [ext_resource type="Script" uid="uid://d14g860liuoob" path="res://sceny/bullet.gd" id="1_wcijj"]
+[ext_resource type="AudioStream" uid="uid://d4ikah5h0nqdk" path="res://assets/sounds/shoot.mp3" id="3_86r3o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_onv60"]
 atlas = ExtResource("1_n8whv")
@@ -274,5 +275,9 @@ flip_h = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1372106027]
 position = Vector2(12, 1)
 shape = SubResource("RectangleShape2D_4vuit")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1562848719]
+stream = ExtResource("3_86r3o")
+autoplay = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

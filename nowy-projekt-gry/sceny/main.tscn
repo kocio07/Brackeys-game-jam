@@ -20,7 +20,6 @@
 [ext_resource type="Script" uid="uid://byrf5bnj0fglx" path="res://skrypty/label_7.gd" id="18_avd7h"]
 [ext_resource type="Texture2D" uid="uid://dmpvwgndhcuh6" path="res://assets/Rocky Roads/Objects/flag.png" id="19_aclmx"]
 [ext_resource type="Texture2D" uid="uid://b3l7ivrduulsg" path="res://assets/Rocky Roads/Deco/tree.png" id="21_06eqf"]
-[ext_resource type="PackedScene" uid="uid://c4wxqd7eix0ep" path="res://sceny/audio_stream_player_2d.tscn" id="21_873jp"]
 [ext_resource type="Texture2D" uid="uid://dwojierx4qbx" path="res://assets/Rocky Roads/Deco/tree_trunk.png" id="22_mny4e"]
 [ext_resource type="PackedScene" uid="uid://vni8euhrhfhl" path="res://sceny/invisible_block.tscn" id="23_mny4e"]
 [ext_resource type="Texture2D" uid="uid://dywptawwslwkx" path="res://assets/portal/Dimensional_Portal.png" id="27_873jp"]
@@ -794,9 +793,6 @@ position = Vector2(263, -55)
 rotation = -0.0015106201
 collision_layer = 1
 collision_mask = 1
-
-[node name="AudioStreamPlayer2D" parent="." unique_id=1430178328 instance=ExtResource("21_873jp")]
-position = Vector2(442, 70)
 
 [node name="Killzone2" parent="." unique_id=944250529 instance=ExtResource("15_rr6wh")]
 position = Vector2(388, -31)

@@ -6,6 +6,8 @@ extends CharacterBody2D
 @export var weapon_speed = 200.0
 @export var direction = 1
 @export var bullet_scene: PackedScene
+@export var fire_rate: float = 0.15
+var _shoot_timer: float = 0.0
 
 @onready var color_rect = $CanvasLayer2/ColorRect
 @onready var muzzle: Marker2D = $Muzzle
@@ -65,9 +67,12 @@ func teleport_with_effect_out():
 		.set_ease(Tween.EASE_OUT)
 	await tween_out.finished
 	
-func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("shoot"):
+func _process(delta: float) -> void:
+	if _shoot_timer > 0.0:
+		_shoot_timer -= delta
+	if Input.is_action_pressed("shoot") and _shoot_timer <= 0.0:
 		try_to_shoot()
+		_shoot_timer = fire_rate
 		
 func try_to_shoot() -> void:
 	if Global.has_weapon == true:
