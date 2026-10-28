@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://e6dq4o7v3q7f"]
 
 [ext_resource type="Texture2D" uid="uid://cx2ldjusm33eb" path="res://assets/paid/GandalfHardcore Projectiles and effects/GandalfHardcore Projectiles2.png" id="1_n8whv"]
-[ext_resource type="Script" uid="uid://d14g860liuoob" path="res://sceny/bullet.gd" id="1_wcijj"]
+[ext_resource type="Script" uid="uid://d14g860liuoob" path="res://skrypty/bullet.gd" id="1_wcijj"]
 [ext_resource type="AudioStream" uid="uid://d4ikah5h0nqdk" path="res://assets/sounds/shoot.mp3" id="3_86r3o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_onv60"]

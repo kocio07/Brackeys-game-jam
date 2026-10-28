@@ -10,15 +10,15 @@
 [ext_resource type="PackedScene" uid="uid://cohsbpcu4rhms" path="res://sceny/gracz.tscn" id="9_nca4t"]
 [ext_resource type="FontFile" uid="uid://bcrp3l0uldjoy" path="res://assets/augiepixel.ttf" id="12_yvav6"]
 [ext_resource type="PackedScene" uid="uid://deanx3wosse4c" path="res://sceny/wrog_1.tscn" id="13_nca4t"]
-[ext_resource type="Script" uid="uid://5381bghkjoni" path="res://sceny/firts_wepon.gd" id="14_bpnmk"]
+[ext_resource type="Script" uid="uid://5381bghkjoni" path="res://skrypty/firts_wepon.gd" id="14_bpnmk"]
 [ext_resource type="PackedScene" uid="uid://d0b62vcx35get" path="res://sceny/killzone.tscn" id="14_s4xxt"]
 [ext_resource type="Texture2D" uid="uid://lm7b4crp0eak" path="res://assets/Medieval weapons pack/Wands/Wands-x6.png" id="14_sah3u"]
-[ext_resource type="Script" uid="uid://boxtlap01p27r" path="res://sceny/double_jump.gd" id="15_bpnmk"]
+[ext_resource type="Script" uid="uid://boxtlap01p27r" path="res://skrypty/double_jump.gd" id="15_bpnmk"]
 [ext_resource type="PackedScene" uid="uid://b35y6nixbafqb" path="res://sceny/checkpoint.tscn" id="15_sah3u"]
 [ext_resource type="Texture2D" uid="uid://df0lolfxyugfd" path="res://assets/paid/Weapons Pack.png" id="16_7mycb"]
 [ext_resource type="Texture2D" uid="uid://dywptawwslwkx" path="res://assets/portal/Dimensional_Portal.png" id="17_7mycb"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sah3u"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mycb"]
 texture = ExtResource("2_irs44")
 3:0/0 = 0
 4:0/0 = 0
@@ -77,7 +77,7 @@ texture = ExtResource("2_irs44")
 6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bpnmk"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b2vob"]
 texture = ExtResource("3_lx01c")
 2:1/0 = 0
 2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -132,7 +132,7 @@ texture = ExtResource("3_lx01c")
 6:4/0 = 0
 6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mycb"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_au3bg"]
 texture = ExtResource("4_pjdm2")
 2:0/0 = 0
 3:0/0 = 0
@@ -192,7 +192,7 @@ texture = ExtResource("4_pjdm2")
 6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 11:5/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b2vob"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f7kik"]
 texture = ExtResource("5_cmxp2")
 2:0/0 = 0
 4:0/0 = 0
@@ -276,7 +276,7 @@ texture = ExtResource("5_cmxp2")
 11:5/0 = 0
 11:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_au3bg"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a56qp"]
 texture = ExtResource("6_yvav6")
 2:0/0 = 0
 3:0/0 = 0
@@ -336,7 +336,7 @@ texture = ExtResource("6_yvav6")
 10:5/0 = 0
 10:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f7kik"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mlreh"]
 texture = ExtResource("7_nca4t")
 2:0/0 = 0
 3:0/0 = 0
@@ -397,7 +397,7 @@ texture = ExtResource("7_nca4t")
 6:4/0 = 0
 6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a56qp"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_slrqf"]
 texture = ExtResource("8_s4xxt")
 0:0/0 = 0
 1:0/0 = 0
@@ -413,13 +413,13 @@ texture = ExtResource("8_s4xxt")
 
 [sub_resource type="TileSet" id="TileSet_mlreh"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_sah3u")
-sources/1 = SubResource("TileSetAtlasSource_bpnmk")
-sources/2 = SubResource("TileSetAtlasSource_7mycb")
-sources/3 = SubResource("TileSetAtlasSource_b2vob")
-sources/4 = SubResource("TileSetAtlasSource_au3bg")
-sources/5 = SubResource("TileSetAtlasSource_f7kik")
-sources/6 = SubResource("TileSetAtlasSource_a56qp")
+sources/0 = SubResource("TileSetAtlasSource_7mycb")
+sources/1 = SubResource("TileSetAtlasSource_b2vob")
+sources/2 = SubResource("TileSetAtlasSource_au3bg")
+sources/3 = SubResource("TileSetAtlasSource_f7kik")
+sources/4 = SubResource("TileSetAtlasSource_a56qp")
+sources/5 = SubResource("TileSetAtlasSource_mlreh")
+sources/6 = SubResource("TileSetAtlasSource_slrqf")
 
 [sub_resource type="LabelSettings" id="LabelSettings_nca4t"]
 font = ExtResource("12_yvav6")

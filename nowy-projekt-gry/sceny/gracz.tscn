@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://b2y5t5nu8fwx5" path="res://assets/Skeleton_Bones/Pixel_Size_64x64/Skull_Normal.png" id="7_vxf87"]
 [ext_resource type="FontFile" uid="uid://bcrp3l0uldjoy" path="res://assets/augiepixel.ttf" id="8_c7ph3"]
 [ext_resource type="Script" uid="uid://mklhaaoquak8" path="res://skrypty/dead_ui.gd" id="9_3me7c"]
-[ext_resource type="Shader" uid="uid://0f1h8uc1tll5" path="res://sceny/swirl_fade.gdshader" id="11_d0a07"]
+[ext_resource type="Shader" uid="uid://0f1h8uc1tll5" path="res://skrypty/swirl_fade.gdshader" id="11_d0a07"]
 [ext_resource type="PackedScene" uid="uid://e6dq4o7v3q7f" path="res://sceny/bullet.tscn" id="11_vxf87"]
 [ext_resource type="PackedScene" uid="uid://c4wxqd7eix0ep" path="res://sceny/audio_stream_player_2d.tscn" id="12_c7ph3"]
 
