@@ -5,3 +5,4 @@ var previous_checkpoint: AnimatedSprite2D = null  #to sie pozniej przyda jak bed
 var dead_counter = 0
 var has_weapon = false
 var weapon = 0
+var double_jump = false

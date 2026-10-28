@@ -13,7 +13,9 @@
 [ext_resource type="Script" uid="uid://5381bghkjoni" path="res://sceny/firts_wepon.gd" id="14_bpnmk"]
 [ext_resource type="PackedScene" uid="uid://d0b62vcx35get" path="res://sceny/killzone.tscn" id="14_s4xxt"]
 [ext_resource type="Texture2D" uid="uid://lm7b4crp0eak" path="res://assets/Medieval weapons pack/Wands/Wands-x6.png" id="14_sah3u"]
+[ext_resource type="Script" uid="uid://boxtlap01p27r" path="res://sceny/double_jump.gd" id="15_bpnmk"]
 [ext_resource type="PackedScene" uid="uid://b35y6nixbafqb" path="res://sceny/checkpoint.tscn" id="15_sah3u"]
+[ext_resource type="Texture2D" uid="uid://df0lolfxyugfd" path="res://assets/paid/Weapons Pack.png" id="16_7mycb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sah3u"]
 texture = ExtResource("2_irs44")
@@ -439,6 +441,24 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4vuit"]
+size = Vector2(12, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b2vob"]
+atlas = ExtResource("16_7mycb")
+region = Rect2(80, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5rwrc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b2vob")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Level 2" type="Node2D" unique_id=1899524453]
 
 [node name="MainMap" type="TileMapLayer" parent="." unique_id=1686375280]
@@ -511,4 +531,16 @@ rotation = -0.0015106201
 collision_layer = 1
 collision_mask = 1
 
+[node name="double jump" type="Area2D" parent="." unique_id=833833558]
+position = Vector2(395, -10)
+script = ExtResource("15_bpnmk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="double jump" unique_id=667336535]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_4vuit")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="double jump" unique_id=1951789988]
+sprite_frames = SubResource("SpriteFrames_5rwrc")
+
 [connection signal="body_entered" from="firts wepon" to="firts wepon" method="_on_body_entered"]
+[connection signal="body_entered" from="double jump" to="double jump" method="_on_body_entered"]

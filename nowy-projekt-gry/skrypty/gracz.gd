@@ -8,6 +8,7 @@ extends CharacterBody2D
 @export var bullet_scene: PackedScene
 @export var fire_rate: float = 0.15
 var _shoot_timer: float = 0.0
+var can_double_jump: bool = true
 
 @onready var color_rect = $CanvasLayer2/ColorRect
 @onready var muzzle: Marker2D = $Muzzle
@@ -38,12 +39,20 @@ func _physics_process(delta: float) -> void:
 	# Grawitacja
 	if not is_on_floor():
 		velocity.y += gravity * delta
+	else:
+		can_double_jump = true
 	
 	# Skok
-	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y -= jump_force
-		$"Skok sfx".play()
-		$AnimatedSprite2D.play("Jump")
+	if Input.is_action_just_pressed("jump"):
+		if is_on_floor():
+			velocity.y -= jump_force
+			$"Skok sfx".play()
+			$AnimatedSprite2D.play("Jump")
+		elif Global.double_jump and can_double_jump:
+			velocity.y = -jump_force
+			can_double_jump = false
+			$"Skok sfx".play()
+			$AnimatedSprite2D.play("Jump")
 		
 	move_and_slide()
 
