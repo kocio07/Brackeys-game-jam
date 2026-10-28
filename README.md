@@ -17,3 +17,4 @@ team:
 - [Pixel Dimensional Portal](https://pixelnauta.itch.io/pixel-dimensional-portal-32x32) -> Portal
 - [Pixel Art Projectile Effects](https://gandalfhardcore.itch.io/pixel-art-projectile-effects) -> Wepons effects
 - [Medieval weapons pack](https://pixelhole.itch.io/medieval-weapons-pack) -> Wepons
+- [CatDev's Medieval Icons](https://catdev-pixelarts.itch.io/catdevs-medieval-icons) -> Potions
