@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://mklhaaoquak8" path="res://skrypty/dead_ui.gd" id="9_3me7c"]
 [ext_resource type="Shader" uid="uid://0f1h8uc1tll5" path="res://skrypty/swirl_fade.gdshader" id="11_d0a07"]
 [ext_resource type="PackedScene" uid="uid://e6dq4o7v3q7f" path="res://sceny/bullet.tscn" id="11_vxf87"]
+[ext_resource type="Script" uid="uid://7nxtnt3usic3" path="res://sceny/progress_bar.gd" id="12_3me7c"]
 [ext_resource type="PackedScene" uid="uid://c4wxqd7eix0ep" path="res://sceny/audio_stream_player_2d.tscn" id="12_c7ph3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hi6mn"]
@@ -178,6 +179,9 @@ shader_parameter/progress = 0.0
 shader_parameter/spiral_strength = 15.0
 shader_parameter/cover_color = Color(0, 0, 0, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7ph3"]
+bg_color = Color(0.8500508, 0.23657799, 0.23871017, 1)
+
 [node name="Gracz" type="CharacterBody2D" unique_id=724449849 groups=["gracz"]]
 collision_layer = 3
 collision_mask = 3
@@ -232,6 +236,23 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer2" unique_id=2128765537]
+offset_left = 159.0
+offset_top = 38.0
+offset_right = 886.0
+offset_bottom = 65.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_c7ph3")
+show_percentage = false
+script = ExtResource("12_3me7c")
+
+[node name="Label2" type="Label" parent="CanvasLayer2" unique_id=1316466461]
+offset_left = 479.0
+offset_top = 10.0
+offset_right = 559.0
+offset_bottom = 33.0
+text = "boss bar"
+label_settings = SubResource("LabelSettings_vxf87")
 
 [node name="Muzzle" type="Marker2D" parent="." unique_id=459070956]
 position = Vector2(0, 4)

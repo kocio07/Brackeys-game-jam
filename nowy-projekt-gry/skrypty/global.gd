@@ -6,3 +6,5 @@ var dead_counter = 0
 var has_weapon = false
 var weapon = 0
 var double_jump = false
+var boss_max_hp: float = 100.0
+var boss_current_hp: float = 100.0
