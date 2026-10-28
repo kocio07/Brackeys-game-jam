@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dywptawwslwkx" path="res://assets/portal/Dimensional_Portal.png" id="11_crl4k"]
 [ext_resource type="FontFile" uid="uid://bcrp3l0uldjoy" path="res://assets/augiepixel.ttf" id="11_s4d3h"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6j1je"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s4d3h"]
 texture = ExtResource("1_06qvx")
 3:0/0 = 0
 4:0/0 = 0
@@ -72,7 +72,7 @@ texture = ExtResource("1_06qvx")
 6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s8m6x"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_woxfb"]
 texture = ExtResource("2_rxq0q")
 2:1/0 = 0
 2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -127,7 +127,7 @@ texture = ExtResource("2_rxq0q")
 6:4/0 = 0
 6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6nwwn"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6j1je"]
 texture = ExtResource("3_puhho")
 2:0/0 = 0
 3:0/0 = 0
@@ -187,7 +187,7 @@ texture = ExtResource("3_puhho")
 6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 11:5/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gppur"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s8m6x"]
 texture = ExtResource("4_i7wag")
 2:0/0 = 0
 4:0/0 = 0
@@ -271,7 +271,7 @@ texture = ExtResource("4_i7wag")
 11:5/0 = 0
 11:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fr6d0"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6nwwn"]
 texture = ExtResource("5_crl4k")
 2:0/0 = 0
 3:0/0 = 0
@@ -331,7 +331,7 @@ texture = ExtResource("5_crl4k")
 10:5/0 = 0
 10:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_opg3x"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gppur"]
 texture = ExtResource("6_s4d3h")
 2:0/0 = 0
 3:0/0 = 0
@@ -392,7 +392,7 @@ texture = ExtResource("6_s4d3h")
 6:4/0 = 0
 6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nxyix"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fr6d0"]
 texture = ExtResource("7_woxfb")
 0:0/0 = 0
 1:0/0 = 0
@@ -408,13 +408,13 @@ texture = ExtResource("7_woxfb")
 
 [sub_resource type="TileSet" id="TileSet_5cm48"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_6j1je")
-sources/1 = SubResource("TileSetAtlasSource_s8m6x")
-sources/2 = SubResource("TileSetAtlasSource_6nwwn")
-sources/3 = SubResource("TileSetAtlasSource_gppur")
-sources/4 = SubResource("TileSetAtlasSource_fr6d0")
-sources/5 = SubResource("TileSetAtlasSource_opg3x")
-sources/6 = SubResource("TileSetAtlasSource_nxyix")
+sources/0 = SubResource("TileSetAtlasSource_s4d3h")
+sources/1 = SubResource("TileSetAtlasSource_woxfb")
+sources/2 = SubResource("TileSetAtlasSource_6j1je")
+sources/3 = SubResource("TileSetAtlasSource_s8m6x")
+sources/4 = SubResource("TileSetAtlasSource_6nwwn")
+sources/5 = SubResource("TileSetAtlasSource_gppur")
+sources/6 = SubResource("TileSetAtlasSource_fr6d0")
 
 [sub_resource type="LabelSettings" id="LabelSettings_woxfb"]
 font = ExtResource("11_s4d3h")
@@ -502,11 +502,12 @@ offset_bottom = 40.0
 
 [node name="Label" type="Label" parent="Labels" unique_id=1993785266]
 layout_mode = 0
-offset_left = 443.0
-offset_top = -80.0
-offset_right = 503.0
-offset_bottom = -57.0
-text = "last boss"
+offset_left = 420.0
+offset_top = -89.0
+offset_right = 517.0
+offset_bottom = -54.0
+text = "last boss
+click c to enter"
 label_settings = SubResource("LabelSettings_woxfb")
 
 [node name="Last boss" type="Area2D" parent="." unique_id=1596711098]
@@ -522,3 +523,6 @@ autoplay = "default"
 position = Vector2(3129.0002, 137.5)
 scale = Vector2(1.25, 1.25)
 shape = SubResource("RectangleShape2D_woxfb")
+
+[connection signal="body_entered" from="Last boss" to="Gracz" method="_on_last_boss_body_entered"]
+[connection signal="body_exited" from="Last boss" to="Gracz" method="_on_last_boss_body_exited"]

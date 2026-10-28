@@ -1,3 +1,92 @@
 [gd_scene format=3 uid="uid://voapb2s5jyg3"]
 
+[ext_resource type="Texture2D" uid="uid://bau5jvsdj44et" path="res://assets/Rocky Roads/Enemies/slime_blue.png" id="1_7cf68"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gogcf"]
+atlas = ExtResource("1_7cf68")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abti3"]
+atlas = ExtResource("1_7cf68")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_haiui"]
+atlas = ExtResource("1_7cf68")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4xbt8"]
+atlas = ExtResource("1_7cf68")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ampq"]
+atlas = ExtResource("1_7cf68")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hgnoy"]
+atlas = ExtResource("1_7cf68")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_23tly"]
+atlas = ExtResource("1_7cf68")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4vuit"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gogcf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_abti3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_haiui")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4xbt8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ampq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hgnoy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_23tly")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4vuit"]
+size = Vector2(16, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vtfqq"]
+size = Vector2(16, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5rwrc"]
+size = Vector2(16, 10)
+
 [node name="Last Boss Body" type="CharacterBody2D" unique_id=1342636157]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2073871302]
+sprite_frames = SubResource("SpriteFrames_4vuit")
+frame = 1
+frame_progress = 0.6999777
+
+[node name="bullet weak" type="Area2D" parent="." unique_id=163752809]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bullet weak" unique_id=1528070781]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_4vuit")
+
+[node name="death" type="Area2D" parent="." unique_id=933345777]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="death" unique_id=1234106318]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_vtfqq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=310789436]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_5rwrc")

@@ -9,6 +9,7 @@ extends CharacterBody2D
 @export var fire_rate: float = 0.15
 var _shoot_timer: float = 0.0
 var can_double_jump: bool = true
+var interact_last_boss = false
 
 @onready var color_rect = $CanvasLayer2/ColorRect
 @onready var muzzle: Marker2D = $Muzzle
@@ -111,3 +112,15 @@ func shoot_level_one() -> void:
 func _on_next_level_2_body_entered(body: Node2D) -> void:
 	await teleport_with_effect_in()
 	get_tree().change_scene_to_file("res://sceny/main_hub.tscn")
+
+
+func _on_last_boss_body_entered(body: Node2D) -> void:
+	interact_last_boss = true
+
+func _on_last_boss_body_exited(body: Node2D) -> void:
+	interact_last_boss = false
+
+func _unhandled_input(event: InputEvent) -> void:
+	if interact_last_boss and event.is_action_pressed("interact"):
+		await teleport_with_effect_in()
+		get_tree().change_scene_to_file("res://sceny/last_boss.tscn")
