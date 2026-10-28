@@ -258,7 +258,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4vuit"]
-size = Vector2(12, 11)
+size = Vector2(17, 11)
 
 [node name="Bullet" type="Area2D" unique_id=163866233]
 script = ExtResource("1_wcijj")
@@ -272,8 +272,8 @@ frame_progress = 0.06453515
 speed_scale = 2.5
 flip_h = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1372106027]
-position = Vector2(12, 1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1372106027 groups=["bullet"]]
+position = Vector2(9.5, 1)
 shape = SubResource("RectangleShape2D_4vuit")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1562848719]

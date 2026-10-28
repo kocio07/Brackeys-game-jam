@@ -15,6 +15,8 @@ func _physics_process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("gracz"):
 		return
+	if body.is_in_group("wrog"):
+		body.queue_free()
 	visible = false
 	await $AudioStreamPlayer2D.finished
 	queue_free()

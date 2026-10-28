@@ -65,7 +65,10 @@ size = Vector2(15, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5rwrc"]
 size = Vector2(19, 18)
 
-[node name="wrog 1" type="CharacterBody2D" unique_id=1323484641]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iv05c"]
+size = Vector2(28, 21)
+
+[node name="wrog 1" type="CharacterBody2D" unique_id=1323484641 groups=["wrog"]]
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_voncd")
@@ -103,6 +106,13 @@ position = Vector2(18, 0)
 scale = Vector2(0.993618, 1)
 target_position = Vector2(0, 12)
 
+[node name="bullet weak" type="Area2D" parent="." unique_id=729705192]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bullet weak" unique_id=1436337404]
+position = Vector2(2, -1.5)
+shape = SubResource("RectangleShape2D_iv05c")
+
 [connection signal="body_entered" from="weak" to="." method="_on_weak_body_entered"]
 [connection signal="body_entered" from="weak" to="death" method="_on_weak_body_entered"]
 [connection signal="body_entered" from="death" to="." method="_on_death_body_entered"]
+[connection signal="body_entered" from="bullet weak" to="." method="_on_bullet_weak_body_entered"]
