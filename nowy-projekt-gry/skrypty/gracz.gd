@@ -107,3 +107,7 @@ func shoot_level_one() -> void:
 		bullet.direction = shoot_dir
 		
 		get_tree().current_scene.add_child(bullet)
+
+func _on_next_level_2_body_entered(body: Node2D) -> void:
+	await teleport_with_effect_in()
+	get_tree().change_scene_to_file("res://sceny/main_hub.tscn")
