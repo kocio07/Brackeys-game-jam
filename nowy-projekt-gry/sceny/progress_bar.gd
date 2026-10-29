@@ -1,5 +1,5 @@
 extends ProgressBar
 
 func _ready() -> void:
-	visible = false
-	$"../Label2".visible = false
+	max_value = Global.boss_max_hp
+	value = Global.boss_current_hp
