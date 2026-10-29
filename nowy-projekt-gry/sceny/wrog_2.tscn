@@ -1,3 +1,54 @@
 [gd_scene format=3 uid="uid://dpbnyqurewdri"]
 
+[ext_resource type="Texture2D" uid="uid://bm7eflv4b5yhw" path="res://assets/Rocky Roads/Enemies/cannon.png" id="1_nhgs1"]
+[ext_resource type="Script" uid="uid://xmkknr4h24rw" path="res://sceny/wrog_2.gd" id="1_sepdf"]
+[ext_resource type="PackedScene" uid="uid://dgnmdtrmc0ork" path="res://sceny/bullet_enemy.tscn" id="2_acmq2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3kcqm"]
+atlas = ExtResource("1_nhgs1")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sepdf"]
+atlas = ExtResource("1_nhgs1")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_acmq2"]
+atlas = ExtResource("1_nhgs1")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vtfqq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3kcqm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sepdf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_acmq2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3kcqm")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4vuit"]
+
 [node name="wrog2" type="CharacterBody2D" unique_id=109476261]
+script = ExtResource("1_sepdf")
+bullet_scene = ExtResource("2_acmq2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1429488137]
+position = Vector2(1, -6)
+sprite_frames = SubResource("SpriteFrames_vtfqq")
+frame_progress = 0.30971977
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=18150359]
+shape = SubResource("RectangleShape2D_4vuit")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=556395309]
+position = Vector2(-20, 0)

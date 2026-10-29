@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://deanx3wosse4c" path="res://sceny/wrog_1.tscn" id="11_4p3br"]
 [ext_resource type="FontFile" uid="uid://bcrp3l0uldjoy" path="res://assets/augiepixel.ttf" id="12_reiqe"]
 [ext_resource type="Texture2D" uid="uid://dywptawwslwkx" path="res://assets/portal/Dimensional_Portal.png" id="13_r4dds"]
+[ext_resource type="PackedScene" uid="uid://dpbnyqurewdri" path="res://sceny/wrog_2.tscn" id="14_us5gc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0xgj7"]
 texture = ExtResource("1_mfmcs")
@@ -480,7 +481,7 @@ tile_map_data = PackedByteArray("AAD//wAAAgAEAAEAAAAAAAAAAgADAAEAAAABAAAAAgAEAAE
 tile_set = SubResource("TileSet_yry51")
 
 [node name="Gracz" parent="." unique_id=724449849 instance=ExtResource("8_oumnr")]
-position = Vector2(2, -85)
+position = Vector2(2, -77)
 
 [node name="Camera2D" type="Camera2D" parent="Gracz" unique_id=799712214]
 position = Vector2(0, -31)
@@ -577,5 +578,8 @@ autoplay = "default"
 position = Vector2(3129.0002, 137.5)
 scale = Vector2(1.25, 1.25)
 shape = SubResource("RectangleShape2D_7f0aa")
+
+[node name="wrog2" parent="." unique_id=109476261 instance=ExtResource("14_us5gc")]
+position = Vector2(1356, 182)
 
 [connection signal="body_entered" from="next level2" to="Gracz" method="_on_next_level_2_body_entered"]
