@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://d0ujw7vo81npb" path="res://assets/Rocky Roads/Deco/clouds.png" id="7_p0rf6"]
 [ext_resource type="PackedScene" uid="uid://cohsbpcu4rhms" path="res://sceny/gracz.tscn" id="8_y3yog"]
 [ext_resource type="PackedScene" uid="uid://voapb2s5jyg3" path="res://sceny/last_boss_body.tscn" id="9_tkf0a"]
+[ext_resource type="Script" uid="uid://beyfvow108ic3" path="res://sceny/last_boss_body.gd" id="11_hoyph"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0ksdm"]
 texture = ExtResource("1_7v737")
@@ -430,5 +431,6 @@ zoom = Vector2(3, 3)
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
 
-[node name="Last Boss Body" parent="." unique_id=1342636157 instance=ExtResource("9_tkf0a")]
+[node name="Last Boss Body" parent="." unique_id=1342636157 groups=["boss"] instance=ExtResource("9_tkf0a")]
 position = Vector2(101, -8)
+script = ExtResource("11_hoyph")

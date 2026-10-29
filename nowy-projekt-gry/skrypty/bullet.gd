@@ -25,6 +25,8 @@ func _on_body_entered(body: Node2D) -> void:
 		return
 	if body.is_in_group("wrog"):
 		body.queue_free()
+	if body.has_method("take_damage"):
+		body.take_damage(1)
 	visible = false
 	await $AudioStreamPlayer2D.finished
 	queue_free()

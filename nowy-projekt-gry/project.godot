@@ -33,6 +33,7 @@ enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 gracz=""
 bullet=""
 wrog=""
+boss=""
 
 [input]
 

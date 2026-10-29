@@ -582,4 +582,7 @@ shape = SubResource("RectangleShape2D_7f0aa")
 [node name="wrog2" parent="." unique_id=109476261 instance=ExtResource("14_us5gc")]
 position = Vector2(1356, 182)
 
+[node name="wrog3" parent="." unique_id=404923520 instance=ExtResource("14_us5gc")]
+position = Vector2(1953, 214)
+
 [connection signal="body_entered" from="next level2" to="Gracz" method="_on_next_level_2_body_entered"]
