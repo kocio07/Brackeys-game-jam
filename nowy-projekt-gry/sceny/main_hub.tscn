@@ -521,6 +521,16 @@ You can go to any level
 but you can't get out of it"
 label_settings = SubResource("LabelSettings_woxfb")
 
+[node name="Label3" type="Label" parent="Labels" unique_id=1137574310]
+layout_mode = 0
+offset_left = 246.0
+offset_top = -90.0
+offset_right = 343.0
+offset_bottom = -55.0
+text = "first level
+click c to enter"
+label_settings = SubResource("LabelSettings_woxfb")
+
 [node name="Last boss" type="Area2D" parent="." unique_id=1596711098]
 position = Vector2(-2659, -166)
 
@@ -535,5 +545,20 @@ position = Vector2(3129.0002, 137.5)
 scale = Vector2(1.25, 1.25)
 shape = SubResource("RectangleShape2D_woxfb")
 
+[node name="First level" type="Area2D" parent="." unique_id=1273999459]
+position = Vector2(294, 0)
+
+[node name="next level" type="AnimatedSprite2D" parent="First level" unique_id=1826403837]
+position = Vector2(1.9073486e-06, -28.000011)
+scale = Vector2(1.25, 1.25)
+sprite_frames = SubResource("SpriteFrames_s4d3h")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="First level" unique_id=1774494485]
+position = Vector2(1.0000038, -27.000004)
+scale = Vector2(1.25, 1.25)
+shape = SubResource("RectangleShape2D_woxfb")
+
 [connection signal="body_entered" from="Last boss" to="Gracz" method="_on_last_boss_body_entered"]
 [connection signal="body_exited" from="Last boss" to="Gracz" method="_on_last_boss_body_exited"]
+[connection signal="body_entered" from="First level" to="Gracz" method="_on_first_level_body_entered"]
