@@ -18,3 +18,4 @@ team:
 - [Pixel Art Projectile Effects](https://gandalfhardcore.itch.io/pixel-art-projectile-effects) -> Wepons effects
 - [Medieval weapons pack](https://pixelhole.itch.io/medieval-weapons-pack) -> Wepons
 - [CatDev's Medieval Icons](https://catdev-pixelarts.itch.io/catdevs-medieval-icons) -> Potions
+- [32x32 Graveyard Tiles​](https://i-am-gira.itch.io/32x32-graveyard-tiles) -> Grave
