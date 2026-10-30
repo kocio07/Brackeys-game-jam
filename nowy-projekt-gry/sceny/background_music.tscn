@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b0yh4amjt6sc0"]
+
+[ext_resource type="AudioStream" uid="uid://dlv0nige33idm" path="res://assets/music/11. Dangerous Cave.wav" id="1_p8e72"]
+[ext_resource type="AudioStream" uid="uid://dh4pjpbbvuwng" path="res://assets/music/07. Spirits Forest (loop).wav" id="2_t0tgw"]
+[ext_resource type="AudioStream" uid="uid://by266lnf1mxt0" path="res://assets/music/time_for_adventure.mp3" id="3_ml6q7"]
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_yf0si"]
+stream_count = 3
+stream_0 = ExtResource("1_p8e72")
+stream_1 = ExtResource("2_t0tgw")
+stream_2 = ExtResource("3_ml6q7")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" unique_id=303418588]
+stream = SubResource("AudioStreamPlaylist_yf0si")
+autoplay = true

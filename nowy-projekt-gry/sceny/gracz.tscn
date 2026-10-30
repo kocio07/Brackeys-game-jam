@@ -12,7 +12,6 @@
 [ext_resource type="Shader" uid="uid://0f1h8uc1tll5" path="res://skrypty/swirl_fade.gdshader" id="11_d0a07"]
 [ext_resource type="PackedScene" uid="uid://e6dq4o7v3q7f" path="res://sceny/bullet.tscn" id="11_vxf87"]
 [ext_resource type="Script" uid="uid://7nxtnt3usic3" path="res://sceny/progress_bar.gd" id="12_3me7c"]
-[ext_resource type="PackedScene" uid="uid://c4wxqd7eix0ep" path="res://sceny/audio_stream_player_2d.tscn" id="12_c7ph3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hi6mn"]
 atlas = ExtResource("2_yoavk")
@@ -258,5 +257,3 @@ label_settings = SubResource("LabelSettings_vxf87")
 
 [node name="Muzzle" type="Marker2D" parent="." unique_id=459070956]
 position = Vector2(0, 4)
-
-[node name="AudioStreamPlayer2D" parent="." unique_id=1430178328 instance=ExtResource("12_c7ph3")]
