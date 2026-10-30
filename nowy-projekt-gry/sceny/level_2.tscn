@@ -637,20 +637,20 @@ rotation = -0.0015106201
 collision_layer = 1
 collision_mask = 1
 
-[node name="next level2" type="Area2D" parent="." unique_id=932076891]
+[node name="next levell" type="Area2D" parent="." unique_id=932076891]
 position = Vector2(-2160, -195)
 
-[node name="next level" type="AnimatedSprite2D" parent="next level2" unique_id=17952972]
+[node name="next level" type="AnimatedSprite2D" parent="next levell" unique_id=17952972]
 position = Vector2(3129.0002, 136)
 scale = Vector2(1.25, 1.25)
 sprite_frames = SubResource("SpriteFrames_b2vob")
 autoplay = "default"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="next level2" unique_id=1222501799]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="next levell" unique_id=1222501799]
 position = Vector2(3129.0002, 137.5)
 scale = Vector2(1.25, 1.25)
 shape = SubResource("RectangleShape2D_au3bg")
 
 [connection signal="body_entered" from="firts wepon" to="firts wepon" method="_on_body_entered"]
 [connection signal="body_entered" from="double jump" to="double jump" method="_on_body_entered"]
-[connection signal="body_entered" from="next level2" to="Gracz" method="_on_next_level_2_body_entered"]
+[connection signal="body_entered" from="next levell" to="Gracz" method="_on_next_levell_body_entered"]

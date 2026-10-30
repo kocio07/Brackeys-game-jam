@@ -503,10 +503,11 @@ offset_bottom = 40.0
 [node name="Label" type="Label" parent="Labels" unique_id=1993785266]
 layout_mode = 0
 offset_left = 420.0
-offset_top = -89.0
-offset_right = 517.0
+offset_top = -108.0
+offset_right = 530.0
 offset_bottom = -54.0
-text = "last boss
+text = "boss (you need to
+end level to enter)
 click c to enter"
 label_settings = SubResource("LabelSettings_woxfb")
 
@@ -527,7 +528,7 @@ offset_left = 246.0
 offset_top = -90.0
 offset_right = 343.0
 offset_bottom = -55.0
-text = "first level
+text = "level
 click c to enter"
 label_settings = SubResource("LabelSettings_woxfb")
 
@@ -562,3 +563,4 @@ shape = SubResource("RectangleShape2D_woxfb")
 [connection signal="body_entered" from="Last boss" to="Gracz" method="_on_last_boss_body_entered"]
 [connection signal="body_exited" from="Last boss" to="Gracz" method="_on_last_boss_body_exited"]
 [connection signal="body_entered" from="First level" to="Gracz" method="_on_first_level_body_entered"]
+[connection signal="body_exited" from="First level" to="Gracz" method="_on_first_level_body_exited"]

@@ -86,6 +86,7 @@ func _on_action_timer_timeout() -> void:
 				var direction = sign(target_player.global_position.x - global_position.x)
 				is_preparing_jump = true
 				update_animations()
+				$AudioStreamPlayer2D.play()
 				velocity.x = direction * (speed * 0.75)
 				velocity.y = jump_force * 0.8
 		Phase.PHASE_2:
@@ -93,6 +94,7 @@ func _on_action_timer_timeout() -> void:
 				var direction = sign(target_player.global_position.x - global_position.x)
 				is_preparing_jump = true
 				update_animations()
+				$AudioStreamPlayer2D.play()
 				velocity.x = direction * speed
 				velocity.y = jump_force
 		Phase.PHASE_3:
@@ -100,6 +102,7 @@ func _on_action_timer_timeout() -> void:
 				var direction = sign(target_player.global_position.x - global_position.x)
 				is_preparing_jump = true
 				update_animations()
+				$AudioStreamPlayer2D.play()
 				velocity.x = direction * (speed * 1.4)
 				velocity.y = jump_force * 1.1
 

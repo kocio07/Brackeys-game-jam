@@ -125,10 +125,17 @@ func _unhandled_input(event: InputEvent) -> void:
 	if interact_last_boss and event.is_action_pressed("interact"):
 		await teleport_with_effect_in()
 		get_tree().change_scene_to_file("res://sceny/last_boss.tscn")
-	if interact_first_level and event.is_action_pressed("interact"):
+	if Global.last_boss_unlocked and interact_first_level and event.is_action_pressed("interact"):
 		await teleport_with_effect_in()
 		get_tree().change_scene_to_file("res://sceny/first_level.tscn")
 
 func _on_first_level_body_entered(body: Node2D) -> void:
 	interact_first_level = true
 	
+func _on_next_levell_body_entered(body: Node2D) -> void:
+	Global.last_boss_unlocked = true
+	await teleport_with_effect_in()
+	get_tree().change_scene_to_file("res://sceny/main_hub.tscn")
+
+func _on_first_level_body_exited(body: Node2D) -> void:
+	interact_first_level = false
