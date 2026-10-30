@@ -119,6 +119,7 @@ func take_damage(amount: int) -> void:
 		
 func die() -> void:
 	Global.boss_current_hp = 0
+	$"../Label".visible = true
 	queue_free()
 	
 func check_player_collision() -> void:
@@ -129,6 +130,11 @@ func check_player_collision() -> void:
 			trigger_player_death(collider)
 			
 func trigger_player_death(player_node: Node2D) -> void:
+	var anim_sprite = player_node.get_node_or_null("AnimatedSprite2D")
+	anim_sprite.play("Death")
+	if player_node.has_method("set_physics_process"):
+		player_node.set_physics_process(false)
+	await anim_sprite.animation_finished
 	set_physics_process(false)
 	var tree = Engine.get_main_loop() as SceneTree
 	if tree:

@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cohsbpcu4rhms" path="res://sceny/gracz.tscn" id="8_y3yog"]
 [ext_resource type="PackedScene" uid="uid://voapb2s5jyg3" path="res://sceny/last_boss_body.tscn" id="9_tkf0a"]
 [ext_resource type="Script" uid="uid://beyfvow108ic3" path="res://sceny/last_boss_body.gd" id="11_hoyph"]
+[ext_resource type="FontFile" uid="uid://bcrp3l0uldjoy" path="res://assets/augiepixel.ttf" id="12_o4c63"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0ksdm"]
 texture = ExtResource("1_7v737")
@@ -415,6 +416,9 @@ sources/4 = SubResource("TileSetAtlasSource_igjrx")
 sources/5 = SubResource("TileSetAtlasSource_b02u7")
 sources/6 = SubResource("TileSetAtlasSource_to1vn")
 
+[sub_resource type="LabelSettings" id="LabelSettings_2gngf"]
+font = ExtResource("12_o4c63")
+
 [node name="Node2D" type="Node2D" unique_id=598304863]
 script = ExtResource("1_se14q")
 
@@ -434,3 +438,13 @@ rotation_smoothing_enabled = true
 [node name="Last Boss Body" parent="." unique_id=1342636157 groups=["boss"] instance=ExtResource("9_tkf0a")]
 position = Vector2(101, -8)
 script = ExtResource("11_hoyph")
+
+[node name="Label" type="Label" parent="." unique_id=1419953690]
+visible = false
+offset_left = -77.0
+offset_top = -93.0
+offset_right = 88.0
+offset_bottom = -44.0
+text = "The end
+Thanks for playing <3"
+label_settings = SubResource("LabelSettings_2gngf")

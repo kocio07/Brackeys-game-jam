@@ -22,6 +22,14 @@ func _physics_process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("gracz"):
+		var anim_sprite = body.get_node_or_null("AnimatedSprite2D")
+		anim_sprite.play("Death")
+		if body.has_method("set_physics_process"):
+			body.set_physics_process(false)
+		await anim_sprite.animation_finished
+		anim_sprite.play("Idle")
+		if body.has_method("set_physics_process"):
+			body.set_physics_process(true)
 		Global.dead_counter += 1
 		if Global.checkpoint_pos != Vector2(-999, -999):
 			body.global_position = Global.checkpoint_pos
