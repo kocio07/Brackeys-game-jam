@@ -1,6 +1,6 @@
 # Brackeys-game-jam
 
-Play here -> [Click to play](https://kocio07.itch.io/tnpgxd)
+Play here -> https://kocio07.itch.io/tnpgxd
 
 our game made for brackeys game jam !
 
