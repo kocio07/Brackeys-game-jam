@@ -237,7 +237,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer2" unique_id=2128765537]
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer2" unique_id=2128765537 groups=["boss_bar"]]
 visible = false
 offset_left = 159.0
 offset_top = 38.0

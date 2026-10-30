@@ -131,3 +131,4 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _on_first_level_body_entered(body: Node2D) -> void:
 	interact_first_level = true
+	

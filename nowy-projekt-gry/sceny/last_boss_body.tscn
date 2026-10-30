@@ -54,7 +54,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_23tly")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"default",
 "speed": 5.0
 }]
@@ -72,8 +72,7 @@ size = Vector2(16, 10)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2073871302]
 sprite_frames = SubResource("SpriteFrames_4vuit")
-frame = 1
-frame_progress = 0.6999777
+frame_progress = 0.31918448
 
 [node name="bullet weak" type="Area2D" parent="." unique_id=163752809]
 

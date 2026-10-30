@@ -34,6 +34,7 @@ gracz=""
 bullet=""
 wrog=""
 boss=""
+boss_bar=""
 
 [input]
 
